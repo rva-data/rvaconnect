@@ -1,0 +1,32 @@
+# Django 1.6beta
+-e git+https://github.com/django/django.git@70f2d9aaffcdd255b1fde6c83b7fe584c4ee3d45#egg=Django
+
+dj-database-url==0.2.1
+psycopg2==2.5
+gunicorn==17.5
+South==0.8.1                        # DB migrations
+
+django-extensions==1.1.1            # better shell, add'l fields
+django-model-utils==1.3.1           # Better models
+django-form-utils==0.3              # Better forms
+
+django-secure==1.0                  # Security reminders, from Mozilla
+raven==3.3.12                       # Exception logging
+# django_compressor==1.3  Install failed            # Static file compression
+nose-progressive==1.3               # Better test results
+mock==1.0b1                         # Testing requirement
+#django-redis-sessions==0.3.1        # Redis based user sessions
+
+django-storages==1.1.8              # Alternate file storage support
+# boto==2.9.6 NOT python3 compat                         # AWS library
+
+#django-celery==3.0.17               # Celery for out-of-request tasks
+#django-celery-email==1.0.3          # Async email backend
+
+# US Local flavors
+-e git://github.com/django/django-localflavor-us.git@dc1c554800ab975e068ac476cfbe7e21c108ca61#egg=django_localflavor_us-dev
+# use dev version of django-nose so we have tools (asserts)
+# django-nose==1.1                    # Better testing
+-e git://github.com/jbalogh/django-nose.git@a420186893c0d6d80e92992231db14a14d1b0903#egg=django_nose-dev
+
+django-waffle==0.9.1                  # Feature flipping
