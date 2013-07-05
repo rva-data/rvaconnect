@@ -227,8 +227,9 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 BROKER_URL = env_var('CLOUDAMQP_URL', 'amqp://guest:guest@localhost:5672/')
 BROKER_POOL_LIMIT = env_var('BROKER_POOL_LIMIT', 1)
 
+
 ###########################################################
-# Email / Mailgun settings
+# Email
 ###########################################################
 
 EMAIL_BACKEND = env_var('EMAIL_BACKEND',
@@ -240,3 +241,9 @@ EMAIL_PORT = env_var('EMAIL_PORT')
 EMAIL_HOST_USER = env_var('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env_var('EMAIL_HOST_PASSWORD')
 FROM_EMAIL = env_var('FROM_EMAIL', '')
+
+
+###########################################################
+# Admin
+###########################################################
+ADMIN_URL_PATH = env_var('ADMIN_URL_PATH', '^admin/')
