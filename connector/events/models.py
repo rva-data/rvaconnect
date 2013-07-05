@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from django.contrib.gis.db import models
+from django.db import models
 from model_utils.models import TimeStampedModel, TimeFramedModel
 
 
@@ -13,7 +13,7 @@ class ActiveManager(models.Manager):
     used for detail views, as even past events should be shown.
     """
     def get_query_set(self):
-        return super().get_query_set().filter(is_active=True)
+        return super().get_queryset().filter(is_active=True)
 
 
 class CurrentManager(ActiveManager):
@@ -23,7 +23,7 @@ class CurrentManager(ActiveManager):
     This functionality should be used for list views and/or search indexing.
     """
     def get_query_set(self):
-        return super().get_query_set().filter(end__lte=datetime.now)
+        return super().get_queryset().filter(end__lte=datetime.now)
 
 
 class Event(TimeStampedModel, TimeFramedModel):
@@ -31,13 +31,14 @@ class Event(TimeStampedModel, TimeFramedModel):
     Basic model for listing events.
     """
     name = models.CharField(max_length=100)
-    #start = models.DateTimeField()
-    #end = models.DateTimeField()
     description = models.TextField()
     location = models.CharField(max_length=200, blank=True, null=True,
             help_text="This should be entered in a format amenable to geocoding.")
     url = models.URLField(blank=True, null=True)
-    geolocation = models.PointField(null=True, blank=True)
+    latitude = models.DecimalField(max_digits=10, decimal_places=7, null=True,
+            blank=True)
+    longitude = models.DecimalField(max_digits=10, decimal_places=7, null=True,
+            blank=True)
     is_active = models.BooleanField(default=True)
 
     objects = models.Manager()
