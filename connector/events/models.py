@@ -31,7 +31,8 @@ class Event(TimeStampedModel, TimeFramedModel):
     Basic model for listing events.
     """
     name = models.CharField(max_length=100)
-    description = models.TextField()
+    description_markdown = models.TextField(default='')
+    description = models.TextField(null=True)
     location = models.CharField(max_length=200, blank=True, null=True,
             help_text="This should be entered in a format amenable to geocoding.")
     url = models.URLField(blank=True, null=True)

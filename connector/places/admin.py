@@ -1,6 +1,11 @@
 from django.contrib import admin
 
 from .models import Place
+from .forms import PlaceAdminForm
 
 
-admin.site.register(Place)
+class PlaceAdmin(admin.ModelAdmin):
+    form = PlaceAdminForm
+
+
+admin.site.register(Place, PlaceAdmin)
