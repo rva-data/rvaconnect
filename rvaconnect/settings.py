@@ -191,7 +191,7 @@ DEFAULT_FILE_STORAGE = env_var('DEFAULT_FILE_STORAGE', 'django.core.files.storag
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = env_var('STATIC_URL', '/static/')
 
-ALLOWED_HOSTS = ['localhost', 'rvaconnect.com', 'www.rvaconnect.com']
+ALLOWED_HOSTS = ['localhost', 'rvaconnect.herokuapp.com', 'rvaconnect.com', 'www.rvaconnect.com']
 
 ###########################################################
 # Exception handling and reporting
