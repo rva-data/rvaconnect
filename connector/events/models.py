@@ -40,7 +40,12 @@ class Event(TimeStampedModel, TimeFramedModel):
     longitude = models.DecimalField(max_digits=10, decimal_places=7, null=True,
             blank=True)
     is_active = models.BooleanField(default=True)
+    notes = models.TextField(blank=True, null=True,
+            help_text="Optional notes that will not be displayed publicly")
 
     objects = models.Manager()
     active = ActiveManager()
     current = CurrentManager()
+
+    def __unicode__(self):
+        return self.name

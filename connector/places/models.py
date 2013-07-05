@@ -28,3 +28,8 @@ class Place(TimeStampedModel):
             blank=True)
     is_active = models.BooleanField(default=True)
     category = models.CharField(choices=TYPES, max_length=20)
+    notes = models.TextField(blank=True, null=True,
+            help_text="Optional notes that will not be displayed publicly")
+
+    def __unicode__(self):
+        return self.name
