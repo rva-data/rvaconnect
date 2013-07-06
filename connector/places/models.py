@@ -1,3 +1,5 @@
+import markdown
+
 from django.db import models
 from model_utils import Choices
 from model_utils.models import TimeStampedModel
@@ -8,7 +10,7 @@ class ActiveManager(models.Manager):
     Manager class for returning only active places.
     """
     def get_query_set(self):
-        return super().get_queryset().filter(is_active=True)
+        return super(ActiveManager, self).get_queryset().filter(is_active=True)
 
 
 class Place(TimeStampedModel):
@@ -32,5 +34,13 @@ class Place(TimeStampedModel):
     notes = models.TextField(blank=True, null=True,
             help_text="Optional notes that will not be displayed publicly")
 
+    objects = models.Manager()
+    active = ActiveManager()
+
     def __unicode__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        self.description = markdown.markdown(self.description_markdown,
+                output_format='html5')
+        return super(Place, self).save(*args, **kwargs)

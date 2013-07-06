@@ -30,3 +30,4 @@ boto==2.9.6                         # AWS library
 -e git://github.com/jbalogh/django-nose.git@a420186893c0d6d80e92992231db14a14d1b0903#egg=django_nose-dev
 
 django-waffle==0.9.1                  # Feature flipping
+Markdown==2.3.1                     # Super awesome markup

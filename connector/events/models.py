@@ -1,3 +1,5 @@
+import markdown
+
 from datetime import datetime
 
 from django.db import models
@@ -13,7 +15,7 @@ class ActiveManager(models.Manager):
     used for detail views, as even past events should be shown.
     """
     def get_query_set(self):
-        return super().get_queryset().filter(is_active=True)
+        return super(ActiveManager, self).get_queryset().filter(is_active=True)
 
 
 class CurrentManager(ActiveManager):
@@ -23,7 +25,7 @@ class CurrentManager(ActiveManager):
     This functionality should be used for list views and/or search indexing.
     """
     def get_query_set(self):
-        return super().get_queryset().filter(end__lte=datetime.now)
+        return super(CurrentManager, self).get_queryset().filter(end__lte=datetime.now)
 
 
 class Event(TimeStampedModel, TimeFramedModel):
@@ -48,5 +50,13 @@ class Event(TimeStampedModel, TimeFramedModel):
     active = ActiveManager()
     current = CurrentManager()
 
+    class Meta:
+        ordering = ['start']
+
     def __unicode__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        self.description = markdown.markdown(self.description_markdown,
+                output_format='html5')
+        return super(Event, self).save(*args, **kwargs)

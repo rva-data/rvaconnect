@@ -1,0 +1,11 @@
+{% extends "site_base.html" %}
+{% block content %}
+        <div class="page-header">
+          <h1>{{ event.name }}</h1>
+          <p>{{ event.start }}{% if event.end %} &mdash; {{ event.end }}{% endif %}</p>
+        </div>
+        <div class="lead">
+        {{ event.description|safe }}
+        </div>
+        <p>{{ event.location }}</p>
+{% endblock %}
