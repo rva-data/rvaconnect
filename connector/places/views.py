@@ -20,3 +20,8 @@ class PlaceList(ListView):
     queryset = Place.active.all()
     template_name = "places/place_list.html"
     context_object_name = "places_list"
+
+    def get_context_data(self, **kwargs):
+        context = super(PlaceList, self).get_context_data(**kwargs)
+        context.update({'geocoded_places': Place.active.geocoded()})
+        return context

@@ -13,6 +13,14 @@ class ActiveManager(models.Manager):
     def get_query_set(self):
         return super(ActiveManager, self).get_queryset().filter(is_active=True)
 
+    def geocoded(self):
+        """
+        Returns a queryset of places which have both a latitude and longitude
+        associated with them.
+        """
+        return self.get_query_set().filter(latitude__isnull=False,
+                longitude__isnull=False)
+
 
 class Place(TimeStampedModel):
     """
@@ -50,3 +58,11 @@ class Place(TimeStampedModel):
 
     def get_absolute_url(self):
         return reverse('place_detail', kwargs={'slug': self.slug, 'pk': self.pk})
+
+    @property
+    def geolocation(self):
+        """
+        Returns the geolocation in GIS Point format (longitude, latitude)
+        """
+        if self.latitude and self.longitude:
+            return self.longitude, self.latitude

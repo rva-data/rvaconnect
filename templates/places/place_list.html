@@ -25,6 +25,7 @@
             <a href="{{ place.get_absolute_url }}">Get all the info &gt;&gt;</a>
           </div>
          {% endfor %}
+         {{ places_list.geocoded }}
 
          <script src="//cdn.leafletjs.com/leaflet-0.6/leaflet.js"></script>
  <script>
@@ -33,5 +34,8 @@
           maxZoom: 18,
           attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
         }).addTo(map);
+    {% for place in geocoded_places %}
+      L.marker([{{ place.latitude }}, {{ place.longitude }}]).addTo(map).bindPopup("<b><a href='{{ place.get_absolute_url }}'>{{ place.name }}</a></b>");
+    {% endfor %}
  </script>
 {% endblock %}
