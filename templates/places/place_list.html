@@ -21,7 +21,7 @@
          {% for place in places_list %}
           <div>
             <h3>{{ place.name }}</h3>
-            <p>{{ place.description|striptags|truncatewords:20 }}</p>
+            <p>{{ place.description|striptags|truncatewords:20|safe }}</p>
             <a href="{{ place.get_absolute_url }}">Get all the info &gt;&gt;</a>
           </div>
          {% endfor %}
