@@ -19,4 +19,4 @@ class PlaceList(ListView):
     """
     queryset = Place.active.all()
     template_name = "places/place_list.html"
-    context_object_name = "place_list"
+    context_object_name = "places_list"

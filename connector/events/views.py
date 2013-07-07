@@ -22,4 +22,4 @@ class EventList(ListView):
     """
     queryset = Event.current.all()
     template_name = "events/event_list.html"
-    context_object_name = "event_list"
+    context_object_name = "events_list"

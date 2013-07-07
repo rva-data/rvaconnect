@@ -17,6 +17,15 @@
           <h1>Richmond Spaces</h1>
         </div>
         <div id="map"></div>
+
+         {% for place in places_list %}
+          <div>
+            <h3>{{ place.name }}</h3>
+            <p>{{ place.description|striptags|truncatewords:20 }}</p>
+            <a href="{{ place.get_absolute_url }}">Get all the info &gt;&gt;</a>
+          </div>
+         {% endfor %}
+
          <script src="//cdn.leafletjs.com/leaflet-0.6/leaflet.js"></script>
  <script>
     var map = L.map('map').setView([37.540972, -77.432889], 12);

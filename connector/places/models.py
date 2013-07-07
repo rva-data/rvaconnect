@@ -1,6 +1,7 @@
 import markdown
 
 from django.db import models
+from django.core.urlresolvers import reverse
 from model_utils import Choices
 from model_utils.models import TimeStampedModel
 
@@ -46,3 +47,6 @@ class Place(TimeStampedModel):
         self.description = markdown.markdown(self.description_markdown,
                 output_format='html5')
         return super(Place, self).save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse('place_detail', kwargs={'slug': self.slug, 'pk': self.pk})

@@ -4,7 +4,7 @@
           <h1>Richmond Events</h1>
           <p>Upcoming events for developers, designers, and start-up entrepreneurs.</p>
         </div>
-        {% for event in event_list %}
+        {% for event in events_list %}
           <div>
             <h3>{{ event.name }}</h3>
             <p>{{ event.description|striptags|truncatewords:20 }}</p>
