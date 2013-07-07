@@ -1,7 +1,15 @@
 {% extends "site_base.html" %}
 {% block content %}
         <div class="page-header">
-          <h1>Upcoming Events</h1>
+          <h1>Richmond Events</h1>
+          <p>Upcoming events for developers, designers, and start-up entrepreneurs.</p>
         </div>
-        <p class="lead">Coming soon - upcoming events in Richmond and the greater Richmond area.<p>
+        {% for event in event_list %}
+          <div>
+            <h3>{{ event.name }}</h3>
+            <p>{{ event.description|striptags|truncatewords:20 }}</p>
+            <p>{{ event.start }}{% if event.end %} &mdash; {{ event.end }}{% endif %}</p>
+            <a href="{{ event.get_absolute_url }}">Get all the info &gt;&gt;</a>
+          </div>
+        {% endfor %}
 {% endblock %}

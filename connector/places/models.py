@@ -20,6 +20,8 @@ class Place(TimeStampedModel):
     TYPES = Choices('co-working', 'coffee shop')
 
     name = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=100,
+            help_text="This is a field of just lowercase letters, numbers, and dashes used in the URL")
     description_markdown = models.TextField(default='')
     description = models.TextField(null=True)
     location = models.CharField(max_length=200, blank=True, null=True,

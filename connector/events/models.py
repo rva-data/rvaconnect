@@ -3,6 +3,8 @@ import markdown
 from datetime import datetime
 
 from django.db import models
+from django.db.models import Q
+from django.core.urlresolvers import reverse
 from model_utils.models import TimeStampedModel, TimeFramedModel
 
 
@@ -25,7 +27,8 @@ class CurrentManager(ActiveManager):
     This functionality should be used for list views and/or search indexing.
     """
     def get_query_set(self):
-        return super(CurrentManager, self).get_queryset().filter(end__lte=datetime.now)
+        return super(CurrentManager, self).get_queryset().filter(
+                Q(end__gte=datetime.now) | Q(start__gte=datetime.now))
 
 
 class Event(TimeStampedModel, TimeFramedModel):
@@ -33,6 +36,8 @@ class Event(TimeStampedModel, TimeFramedModel):
     Basic model for listing events.
     """
     name = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=100,
+            help_text="This is a field of just lowercase letters, numbers, and dashes used in the URL")
     description_markdown = models.TextField(default='')
     description = models.TextField(null=True)
     location = models.CharField(max_length=200, blank=True, null=True,
@@ -60,3 +65,6 @@ class Event(TimeStampedModel, TimeFramedModel):
         self.description = markdown.markdown(self.description_markdown,
                 output_format='html5')
         return super(Event, self).save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse('event_detail', kwargs={'slug': self.slug, 'pk': self.pk})
