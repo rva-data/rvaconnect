@@ -119,7 +119,7 @@
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li{% if '/events/' in request.path %} class="active"{% endif %}><a href="{% url 'event_list' %}">Events</a></li>
-                <li{% if '/places/' in request.path %} class="active"{% endif %}><a href="{% url 'place_list' %}">Places</a></li>
+                <li{% if '/spaces/' in request.path %} class="active"{% endif %}><a href="{% url 'place_list' %}">Spaces</a></li>
                 <li{% if '/about/' in request.path %} class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
               </ul>
             </div><!--/.nav-collapse -->
