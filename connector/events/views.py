@@ -8,7 +8,7 @@ class EventDetail(DetailView):
     A detail view for events which should fetch the event based on the passed
     ID.
     """
-    model = Event
+    queryset = Event.active.all()
     template_name = "events/event_detail.html"
     context_object_name = "event"
 

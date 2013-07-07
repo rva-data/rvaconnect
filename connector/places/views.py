@@ -8,7 +8,7 @@ class PlaceDetail(DetailView):
     A detail view for places which should fetch the place based on the passed
     ID.
     """
-    model = Place
+    queryset = Place.active.all()
     template_name = "places/place_detail.html"
     context_object_name = "place"
 
