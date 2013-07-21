@@ -1,4 +1,5 @@
 {% extends "site_base.html" %}
+{% load static from staticfiles %}
 
 {% block extracss %}
  <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.6/leaflet.css" />
@@ -7,6 +8,8 @@
  <![endif]-->
  <style type="text/css">
     #map { height: 350px; }
+    #page-title img { height: 200px; width: 200px; }
+    #page-title span.title-text { display: none; }
  </style>
 {% endblock %}
 
@@ -14,7 +17,7 @@
 
 {% block content %}
         <div class="page-header">
-          <h1>RVA Connect</h1>
+          <h1 id="page-title"><img src="{% static "rva-connect-logo.png" %}" alt="RVA Connect"><span class="title-text">RVA Connect</span></h1>
         </div>
         <div class="row">
             <div class="span6">
