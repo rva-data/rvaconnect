@@ -10,6 +10,10 @@
     #map { height: 350px; }
     #page-title img { height: 200px; width: 200px; }
     #page-title span.title-text { display: none; }
+    body { background: url("http://farm6.staticflickr.com/5346/7433867610_00f5ae19ab_h.jpg") no-repeat;}
+    div.content { background: rgba(256, 256, 256, 1.0);}
+    .page-header { border: none; background: rgba(256, 256, 256, 0.6); }
+    .page-header p {float: right; width: 940px; font-size: 36px; font-weight: bold; line-height: 48px; margin-top: 20px;}
  </style>
 {% endblock %}
 
@@ -17,9 +21,10 @@
 
 {% block content %}
         <div class="page-header">
+          <p>Events, collaborative workspaces, affinity groups, and meetups for the start up, developer, and design communities.</p>
           <h1 id="page-title"><img src="{% static "rva-connect-logo.png" %}" alt="RVA Connect"><span class="title-text">RVA Connect</span></h1>
         </div>
-        <div class="row">
+        <div class="row content">
             <div class="span6">
               <h2>Upcoming Events</h3>
               {% for event in events_list %}
@@ -64,4 +69,8 @@
         }).addTo(map);
       L.marker([{{ place.latitude }}, {{ place.longitude }}]).addTo(map).bindPopup("<b><a href='{{ place.get_absolute_url }}'>{{ place.name }}</a></b>");
  </script>
+{% endblock %}
+
+{% block extrafooter %}
+Background image copyright <a href="http://www.flickr.com/photos/22711505@N05/7433867610/sizes/l/in/photostream/">Ron Cogswell</a>.
 {% endblock %}
