@@ -34,6 +34,14 @@ class CurrentManager(ActiveManager):
 class Event(TimeStampedModel, TimeFramedModel):
     """
     Basic model for listing events.
+
+    TimeStampedModel provides two DateTime fields:
+        * created
+        * modified
+
+    TimeFramedModel provides two DateTime fields:
+        * start
+        * end
     """
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100,

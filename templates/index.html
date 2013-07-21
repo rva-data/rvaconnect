@@ -1,0 +1,64 @@
+{% extends "site_base.html" %}
+
+{% block extracss %}
+ <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.6/leaflet.css" />
+ <!--[if lte IE 8]>
+     <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.6/leaflet.ie.css" />
+ <![endif]-->
+ <style type="text/css">
+    #map { height: 350px; }
+ </style>
+{% endblock %}
+
+{% block extrajs %}{% endblock %}
+
+{% block content %}
+        <div class="page-header">
+          <h1>RVA Connect</h1>
+        </div>
+        <div class="row">
+            <div class="span6">
+              <h2>Upcoming Events</h3>
+              {% for event in events_list %}
+                <h3>{{ event.name }}</h3>
+                <p>{{ event.description|striptags|truncatewords:20|safe }}</p>
+                <p>{{ event.start }}{% if event.end %} &mdash; {{ event.end }}{% endif %}</p>
+                <a href="{{ event.get_absolute_url }}">Get all the info &gt;&gt;</a>
+              {% endfor %}
+              <h3>
+                <a href="{% url 'event_list' %}#event-4">See more events</a>
+               </h3>
+            </div>
+            <div class="span6">
+              <h2>Featured Space: <span>{{ place.name }}</span></h3>
+              <div id="map"></div>
+              <div>{{ place.description|safe }}</div>
+              <p>Get the skinny on <a href="{{ place.get_absolute_url }}">{{ place }}</a>.</p>
+              <h3>
+                <a href="{% url 'place_list' %}">See more spaces</a>
+               </h3>
+            </div>
+          </div>
+
+
+
+
+         {% for place in places_list %}
+          <div>
+            <h3>{{ place.name }}</h3>
+            <p>{{ place.description|striptags|truncatewords:20|safe }}</p>
+            <a href="{{ place.get_absolute_url }}">Get all the info &gt;&gt;</a>
+          </div>
+         {% endfor %}
+         {{ places_list.geocoded }}
+
+         <script src="//cdn.leafletjs.com/leaflet-0.6/leaflet.js"></script>
+ <script>
+    var map = L.map('map').setView([{{ place.latitude }}, {{ place.longitude }}], 14);
+    L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
+          maxZoom: 18,
+          attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
+        }).addTo(map);
+      L.marker([{{ place.latitude }}, {{ place.longitude }}]).addTo(map).bindPopup("<b><a href='{{ place.get_absolute_url }}'>{{ place.name }}</a></b>");
+ </script>
+{% endblock %}

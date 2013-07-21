@@ -7,6 +7,7 @@
         {% for event in events_list %}
           <div>
             <h3>{{ event.name }}</h3>
+            <a name="event-{{ forloop.counter }}"></a>
             <p>{{ event.description|striptags|truncatewords:20|safe }}</p>
             <p>{{ event.start }}{% if event.end %} &mdash; {{ event.end }}{% endif %}</p>
             <a href="{{ event.get_absolute_url }}">Get all the info &gt;&gt;</a>
