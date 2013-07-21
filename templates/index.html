@@ -13,7 +13,11 @@
     body { background: url("http://farm6.staticflickr.com/5346/7433867610_00f5ae19ab_h.jpg") no-repeat;}
     div.content { background: rgba(256, 256, 256, 1.0);}
     .page-header { border: none; background: rgba(256, 256, 256, 0.6); }
-    .page-header p {float: right; width: 940px; font-size: 36px; font-weight: bold; line-height: 48px; margin-top: 20px;}
+    .page-header p {float: right; max-width: 940px; font-size: 36px; font-weight: bold; line-height: 48px; margin-top: 20px;}
+
+    @media (max-width: 767px) {
+      h1 img { display: none; }
+    }
  </style>
 {% endblock %}
 
