@@ -9,4 +9,6 @@
         </div>
         <p>{{ place.location }}</p>
         {% if place.url %}<p><a href="{{ place.url }}">Visit {{ place.name }} on the web</a></p>{% endif %}
+        <h3>Share a tip or ask a question</h3>
+        {% include "includes/disqus_comments.html" %}
 {% endblock %}
