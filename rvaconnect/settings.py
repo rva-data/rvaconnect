@@ -150,6 +150,7 @@ INSTALLED_APPS = (
     #'djcelery_email',
     'waffle',
     #'addendum',
+    'connector.circles',
     'connector.events',
     'connector.places',
 )
