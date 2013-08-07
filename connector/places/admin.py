@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Place
+from .models import Place, FeaturedPlace
 from .forms import PlaceAdminForm
 
 
@@ -10,3 +10,4 @@ class PlaceAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Place, PlaceAdmin)
+admin.site.register(FeaturedPlace)

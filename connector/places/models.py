@@ -22,6 +22,15 @@ class ActiveManager(models.Manager):
                 longitude__isnull=False)
 
 
+class FeaturedManager(models.Manager):
+
+    def featured(self):
+        try:
+            return super(FeaturedManager, self).get_query_set()[0].place
+        except IndexError:
+            return None
+
+
 class Place(TimeStampedModel):
     """
     Basic model for listing places.
@@ -66,3 +75,15 @@ class Place(TimeStampedModel):
         """
         if self.latitude and self.longitude:
             return self.longitude, self.latitude
+
+
+class FeaturedPlace(TimeStampedModel):
+    place = models.ForeignKey(Place, related_name="featured_links")
+
+    objects = FeaturedManager()
+
+    class Meta:
+        ordering = ['-created']
+
+    def __unicode__(self):
+        return u"{0}: {1}".format(self.place.name, self.created.date())
