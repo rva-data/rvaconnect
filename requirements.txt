@@ -31,3 +31,5 @@ boto==2.9.6                         # AWS library
 
 django-waffle==0.9.1                  # Feature flipping
 Markdown==2.3.1                     # Super awesome markup
+icalendar==3.5                        # iCal support
+django-ical==1.2                      # iCal feed support
