@@ -1,16 +1,20 @@
 {% extends "site_base.html" %}
+{% load events_tags %}
 {% block content %}
         <div class="page-header">
           <h1>Richmond Events</h1>
           <p>Upcoming events for developers, designers, and start-up entrepreneurs.</p>
         </div>
-        {% for event in events_list %}
-          <div>
-            <h3>{{ event.name }}</h3>
-            <a name="event-{{ forloop.counter }}"></a>
-            <p>{{ event.description|striptags|truncatewords:20|safe }}</p>
-            <p>{{ event.start }}{% if event.end %} &mdash; {{ event.end }}{% endif %}</p>
-            <a href="{{ event.get_absolute_url }}">Get all the info &gt;&gt;</a>
-          </div>
+        {% regroup events_list by start.month as grouped_events %}
+        {% for event_month in grouped_events %}
+          <h2 class="hdr-month hdr-month-{{ event_month.grouper }}">{{ event_month.grouper|month_name }}</h2>
+          {% for event in event_month.list %}
+            <div class="event">
+              <h3><a href="{{ event.get_absolute_url }}">{{ event.name }}</a></h3>
+              <a name="event-{{ forloop.counter }}"></a>
+              <p>{{ event.description|striptags|truncatewords:20|safe }}</p>
+              <p>{{ event.start }}{% if event.end %} &mdash; {{ event.end }}{% endif %}</p>
+            </div>
+            {% endfor %}
         {% endfor %}
 {% endblock %}
