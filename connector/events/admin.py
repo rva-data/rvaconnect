@@ -2,7 +2,7 @@ from datetime import datetime
 
 from django.contrib import admin
 
-from .models import Event
+from .models import Event, EventFeed
 from .forms import EventAdminForm
 
 
@@ -44,4 +44,9 @@ class EventAdmin(admin.ModelAdmin):
     list_filter = ('is_active', PastOrCurrent)
 
 
+class EventFeedAdmin(admin.ModelAdmin):
+    pass
+
+
 admin.site.register(Event, EventAdmin)
+admin.site.register(EventFeed, EventFeedAdmin)

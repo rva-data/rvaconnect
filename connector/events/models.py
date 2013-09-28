@@ -58,6 +58,7 @@ class Event(TimeStampedModel, TimeFramedModel):
     is_active = models.BooleanField(default=True)
     notes = models.TextField(blank=True, null=True,
             help_text="Optional notes that will not be displayed publicly")
+    uid = models.CharField(max_length=100, editable=False, null=True)
 
     objects = models.Manager()
     active = ActiveManager()
@@ -72,7 +73,21 @@ class Event(TimeStampedModel, TimeFramedModel):
     def save(self, *args, **kwargs):
         self.description = markdown.markdown(self.description_markdown,
                 output_format='html5')
+        #if not self.uid:
+        #    self.uid =
         return super(Event, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('event_detail', kwargs={'slug': self.slug, 'pk': self.pk})
+
+
+class EventFeed(TimeStampedModel):
+    """
+    Model class for managing iCalendar feeds of events
+    """
+    name = models.CharField(max_length=100)
+    url = models.URLField(
+        help_text="If the URL starts with webcal://<br/>...replace with http://")
+
+    def __unicode__(self):
+        return self.name
