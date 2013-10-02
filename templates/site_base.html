@@ -71,6 +71,9 @@
       div#disqus_thread { max-width: 600px; }
       div.event { max-width: 600px; }
 
+      .navbar-brand { background: url({% static "ico/rva-connect-logo-32.png" %}) 0 10px no-repeat; padding-left: 40px; }
+      .navbar-inverse { background: rgb(51, 51, 51); }
+
     </style>
 
     <link href="{% static "bootstrap/css/bootstrap-responsive.css" %}" rel="stylesheet">
@@ -109,26 +112,27 @@
     <div id="wrap">
 
       {% block navbar %}
-      <!-- Fixed navbar -->
-      <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="/">RVA Connect</a>
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li{% if '/events/' in request.path %} class="active"{% endif %}><a href="{% url 'event_list' %}">Events</a></li>
-                <li{% if '/spaces/' in request.path %} class="active"{% endif %}><a href="{% url 'place_list' %}">Spaces</a></li>
-                <li{% if '/about/' in request.path %} class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
-              </ul>
-            </div><!--/.nav-collapse -->
+            <a class="navbar-brand" href="/">RVA Connect</a>
           </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li{% if '/events/' in request.path %} class="active"{% endif %}><a href="{% url 'event_list' %}">Events</a></li>
+              <li{% if '/spaces/' in request.path %} class="active"{% endif %}><a href="{% url 'place_list' %}">Spaces</a></li>
+              <li{% if '/about/' in request.path %} class="active"{% endif %}><a href="{% url 'about' %}">About</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
       </div>
+      <!-- Fixed navbar -->
+
       {% endblock %}
 
       <!-- Begin page content -->
