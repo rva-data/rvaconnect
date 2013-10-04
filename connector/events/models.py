@@ -79,15 +79,3 @@ class Event(TimeStampedModel, TimeFramedModel):
 
     def get_absolute_url(self):
         return reverse('event_detail', kwargs={'slug': self.slug, 'pk': self.pk})
-
-
-class EventFeed(TimeStampedModel):
-    """
-    Model class for managing iCalendar feeds of events
-    """
-    name = models.CharField(max_length=100)
-    url = models.URLField(
-        help_text="If the URL starts with webcal://<br/>...replace with http://")
-
-    def __unicode__(self):
-        return self.name

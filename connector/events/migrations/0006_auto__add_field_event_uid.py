@@ -38,14 +38,6 @@ class Migration(SchemaMigration):
             'start': ('django.db.models.fields.DateTimeField', [], {'null': 'True', 'blank': 'True'}),
             'uid': ('django.db.models.fields.CharField', [], {'max_length': '100', 'null': 'True'}),
             'url': ('django.db.models.fields.URLField', [], {'max_length': '200', 'null': 'True', 'blank': 'True'})
-        },
-        u'events.eventfeed': {
-            'Meta': {'object_name': 'EventFeed'},
-            'created': ('model_utils.fields.AutoCreatedField', [], {'default': 'datetime.datetime.now'}),
-            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'modified': ('model_utils.fields.AutoLastModifiedField', [], {'default': 'datetime.datetime.now'}),
-            'name': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
-            'url': ('django.db.models.fields.URLField', [], {'max_length': '200'})
         }
     }
 
