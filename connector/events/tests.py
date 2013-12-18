@@ -21,7 +21,3 @@ class ModelTests(TestCase):
         self.assertFalse(getattr(e, 'uid'))
         e.save()
         self.assertTrue(e.uid)
-
-
-class FeedTests(TestCase):
-    pass

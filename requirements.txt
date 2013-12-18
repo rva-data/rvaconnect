@@ -1,5 +1,4 @@
-# Django 1.6beta
--e git+https://github.com/django/django.git@70f2d9aaffcdd255b1fde6c83b7fe584c4ee3d45#egg=Django
+Django==1.6.1
 
 dj-database-url==0.2.1
 psycopg2==2.5
@@ -29,7 +28,8 @@ boto==2.9.6                         # AWS library
 # django-nose==1.1                    # Better testing
 -e git://github.com/jbalogh/django-nose.git@a420186893c0d6d80e92992231db14a14d1b0903#egg=django_nose-dev
 
-django-waffle==0.9.1                  # Feature flipping
+django-waffle==0.9.2                  # Feature flipping
 Markdown==2.3.1                     # Super awesome markup
 icalendar==3.5                        # iCal support
 django-ical==1.2                      # iCal feed support
+requests==1.2.3

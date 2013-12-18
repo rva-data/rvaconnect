@@ -3,9 +3,9 @@ VERSION:2.0
 PRODID:-//Meetup//RemoteApi//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-ORIGINAL-URL:http://www.meetup.com/GangplankRVA/events/ical/Gangplank+R
- VA/
-X-WR-CALNAME:Events - Gangplank RVA
+X-ORIGINAL-URL:http://www.meetup.com/804RVA/events/ical/804RVA+Technology
+ +Meetups+
+X-WR-CALNAME:Events - 804RVA Technology Meetups 
 BEGIN:VTIMEZONE
 TZID:America/New_York
 X-LIC-LOCATION:America/New_York
@@ -25,420 +25,655 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20130927T110000
-DTEND;TZID=America/New_York:20130927T130000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20131210T180000
+DTEND;TZID=America/New_York:20131210T210000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: Entrepreneurs Friday Lunch Meeting
-DESCRIPTION:Gangplank RVA\nFriday\, September 27 at 11:00 AM\n\nThis is f
- or people interested in having conversations regarding real world issues
-  in running a small business (or starting a new one). Bring your lunc...
- \n\nDetails: http://www.meetup.com/GangplankRVA/events/141462372/
+SUMMARY:Central Virginia Ruby Enthusiasts Group
+DESCRIPTION:804RVA Technology Meetups & Coworking\nTuesday\, December 10 
+ at 6:00 PM\n\n \n \n \n \n \n \n \n \n \nCVREG is the Ruby user group fo
+ r Richmond and the central Virginia area!\n\nDetails: http://www.meetup.
+ com/804RVA/events/qxnqzcyrqbnb/
 CLASS:PUBLIC
-CREATED:20130719T212834Z
-GEO:37.59;-77.50
-LOCATION:Gangplank RVA (2930 West Broad Street\, #9G\, Richmond\, VA 2323
- 0)
-URL:http://www.meetup.com/GangplankRVA/events/141462372/
-LAST-MODIFIED:20130719T212834Z
-UID:event_qgfkkgyrmbkc@meetup.com
+CREATED:20120612T113735Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/qxnqzcyrqbnb/
+LAST-MODIFIED:20120612T113735Z
+UID:event_qxnqzcyrqbnb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20130930T100000
-DTEND;TZID=America/New_York:20130930T110000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20131213T190000
+DTEND;TZID=America/New_York:20131215T220000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: Orientation Meeting for Manage a Business Simulati
- on
-DESCRIPTION:Gangplank RVA\nMonday\, September 30 at 10:00 AM\n\nThe simul
- ation objective is to operate a successful business by manufacturing and
-  marketing a product line\, while competing with other businesses mana..
- .\n\nDetails: http://www.meetup.com/GangplankRVA/events/141760592/
+SUMMARY:Make Video games for Ludum Dare 28!
+DESCRIPTION:804RVA Technology Meetups & Coworking\nFriday\, December 13 a
+ t 7:00 PM\n\nRVA Game Jams is a community project created to get video g
+ ame developers and enthusiasts from the Richmond area together to partic
+ ipate in game jams....\n\nDetails: http://www.meetup.com/804RVA/events/1
+ 50028812/
 CLASS:PUBLIC
-CREATED:20130923T153001Z
-GEO:37.59;-77.50
-LOCATION:Gangplank RVA (2930 West Broad Street\, #9G\, Richmond\, VA 2323
- 0)
-URL:http://www.meetup.com/GangplankRVA/events/141760592/
-LAST-MODIFIED:20130923T201446Z
-UID:event_141760592@meetup.com
+CREATED:20131109T161420Z
+GEO:37.54;-77.45
+LOCATION:804RVA (1657 West Broad Street\, Richmond\, VA 23220)
+URL:http://www.meetup.com/804RVA/events/150028812/
+LAST-MODIFIED:20131204T000836Z
+UID:event_150028812@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131001T100000
-DTEND;TZID=America/New_York:20131001T120000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20131217T190000
+DTEND;TZID=America/New_York:20131217T220000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: BYOW Website Workshop
-DESCRIPTION:Gangplank RVA\nTuesday\, October 1 at 10:00 AM\n\nBYOW = Brin
- g Your Own Website Want to build your own website or update the one you 
- have?  Want to develop and maintain a social media strategy that wo...\n
- \nDetails: http://www.meetup.com/GangplankRVA/events/dvfnngyrnbcb/
+SUMMARY:RVA Data Hackers
+DESCRIPTION:804RVA Technology Meetups & Coworking\nTuesday\, December 17 
+ at 7:00 PM\n\nDetails: http://www.meetup.com/804RVA/events/151905862/
 CLASS:PUBLIC
-CREATED:20130813T203612Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/dvfnngyrnbcb/
-LAST-MODIFIED:20130813T203612Z
-UID:event_dvfnngyrnbcb@meetup.com
+CREATED:20130117T181841Z
+GEO:37.54;-77.45
+LOCATION:804RVA (1657 West Broad Street\, Richmond\, VA 23220)
+URL:http://www.meetup.com/804RVA/events/151905862/
+LAST-MODIFIED:20130117T181841Z
+UID:event_dnlnffyrqbwb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131001T180000
-DTEND;TZID=America/New_York:20131001T190000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20131218T180000
+DTEND;TZID=America/New_York:20131218T210000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: 2nd Orientation for Manage a Business Simulation
-DESCRIPTION:Gangplank RVA\nTuesday\, October 1 at 6:00 PM\n\nThe simulati
- on objective is to operate a successful business by manufacturing and ma
- rketing a product line\, while competing with other businesses mana...\n
- \nDetails: http://www.meetup.com/GangplankRVA/events/141762772/
+SUMMARY:RVA WordPress Wednesday
+DESCRIPTION:804RVA Technology Meetups & Coworking\nWednesday\, December 1
+ 8 at 6:00 PM\n\nRVA WordPress Wednesday Meetups 4th Wednesday of Every M
+ onth! This group is for anyone who uses WordPress\, whether you're a blo
+ gger\, designer\, develop...\n\nDetails: http://www.meetup.com/804RVA/ev
+ ents/150509682/
 CLASS:PUBLIC
-CREATED:20130923T154653Z
-GEO:37.59;-77.50
-LOCATION:Gangplank RVA (2930 West Broad Street\, #9G\, Richmond\, VA 2323
- 0)
-URL:http://www.meetup.com/GangplankRVA/events/141762772/
-LAST-MODIFIED:20130923T201550Z
-UID:event_141762772@meetup.com
+CREATED:20120511T220346Z
+GEO:37.54;-77.45
+LOCATION:804RVA (1657 West Broad Street\, Richmond\, VA 23220)
+URL:http://www.meetup.com/804RVA/events/150509682/
+LAST-MODIFIED:20131126T205728Z
+UID:event_dplhwcyrqbhc@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131002T180000
-DTEND;TZID=America/New_York:20131002T200000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140101T093000
+DTEND;TZID=America/New_York:20140101T123000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: The Bullpen (Practicing Your Pitch)
-DESCRIPTION:Gangplank RVA\nWednesday\, October 2 at 6:00 PM\n\nAre you re
- ady to pitch your idea to potential customers or investors?  Gangplank R
- VA is offering a dedicated night for you to hone your message and ma...\
- n\nDetails: http://www.meetup.com/GangplankRVA/events/137368892/
+SUMMARY:RVA Jelly Day= Free day of coworking with awesome people
+DESCRIPTION:804RVA Technology Meetups & Coworking\nWednesday\, January 1 
+ at 9:30 AM\n\njoin us! free #RVAJelly coworking pass 'cause working alon
+ e sucks & it's way more fun when you're around.'    creativity + collabo
+ ration = coworking O...\n\nDetails: http://www.meetup.com/804RVA/events/
+ qslxcgyscbcb/
 CLASS:PUBLIC
-CREATED:20130829T194206Z
-GEO:37.59;-77.50
-LOCATION:Gangplank RVA (2930 West Broad Street\, #9G\, Richmond\, VA 2323
- 0)
-URL:http://www.meetup.com/GangplankRVA/events/137368892/
-LAST-MODIFIED:20130829T194206Z
-UID:event_dkspqgyrnbdb@meetup.com
+CREATED:20130606T071017Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/qslxcgyscbcb/
+LAST-MODIFIED:20130606T071017Z
+UID:event_qslxcgyscbcb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131004T110000
-DTEND;TZID=America/New_York:20131004T130000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140106T183000
+DTEND;TZID=America/New_York:20140106T200000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: Entrepreneurs Friday Lunch Meeting
-DESCRIPTION:Gangplank RVA\nFriday\, October 4 at 11:00 AM\n\nThis is for 
- people interested in having conversations regarding real world issues in
-  running a small business (or starting a new one). Bring your lunc...\n\
- nDetails: http://www.meetup.com/GangplankRVA/events/qgfkkgyrnbgb/
+SUMMARY:Richmond Adobe User Group Meeting (RAUG)
+DESCRIPTION:804RVA Technology Meetups & Coworking\nMonday\, January 6 at 
+ 6:30 PM\n\nDetails: http://www.meetup.com/804RVA/events/djlbzcyscbjb/
 CLASS:PUBLIC
-CREATED:20130719T212834Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/qgfkkgyrnbgb/
-LAST-MODIFIED:20130719T212834Z
-UID:event_qgfkkgyrnbgb@meetup.com
+CREATED:20120604T215419Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/djlbzcyscbjb/
+LAST-MODIFIED:20130729T022730Z
+UID:event_djlbzcyscbjb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131008T100000
-DTEND;TZID=America/New_York:20131008T120000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140108T173000
+DTEND;TZID=America/New_York:20140108T193000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: BYOW Website Workshop
-DESCRIPTION:Gangplank RVA\nTuesday\, October 8 at 10:00 AM\n\nBYOW = Brin
- g Your Own Website Want to build your own website or update the one you 
- have?  Want to develop and maintain a social media strategy that wo...\n
- \nDetails: http://www.meetup.com/GangplankRVA/events/dvfnngyrnblb/
+SUMMARY:Virginia Innovators Network (VINE) - Show-n-Tell
+DESCRIPTION:804RVA Technology Meetups & Coworking\nWednesday\, January 8 
+ at 5:30 PM\n\nTopic: Show-n-Tell : Joint meeting with Williamsburg Inven
+ tor's Group to share current inventions/projects.   ### Virginia Innovat
+ ors Network is a not...\n\nDetails: http://www.meetup.com/804RVA/events/
+ 142226302/
 CLASS:PUBLIC
-CREATED:20130813T203612Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/dvfnngyrnblb/
-LAST-MODIFIED:20130813T203612Z
-UID:event_dvfnngyrnblb@meetup.com
+CREATED:20130925T223143Z
+GEO:37.54;-77.45
+LOCATION:804RVA (1657 West Broad Street\, Richmond\, VA 23220)
+URL:http://www.meetup.com/804RVA/events/142226302/
+LAST-MODIFIED:20131014T105537Z
+UID:event_dmfhvgyscbkc@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131011T110000
-DTEND;TZID=America/New_York:20131011T130000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140114T180000
+DTEND;TZID=America/New_York:20140114T210000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: Entrepreneurs Friday Lunch Meeting
-DESCRIPTION:Gangplank RVA\nFriday\, October 11 at 11:00 AM\n\nThis is for
-  people interested in having conversations regarding real world issues i
- n running a small business (or starting a new one). Bring your lunc...\n
- \nDetails: http://www.meetup.com/GangplankRVA/events/qgfkkgyrnbpb/
+SUMMARY:Central Virginia Ruby Enthusiasts Group
+DESCRIPTION:804RVA Technology Meetups & Coworking\nTuesday\, January 14 a
+ t 6:00 PM\n\n \n \n \n \n \n \n \n \n \nCVREG is the Ruby user group for
+  Richmond and the central Virginia area!\n\nDetails: http://www.meetup.c
+ om/804RVA/events/qxnqzcyscbsb/
 CLASS:PUBLIC
-CREATED:20130719T212834Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/qgfkkgyrnbpb/
-LAST-MODIFIED:20130719T212834Z
-UID:event_qgfkkgyrnbpb@meetup.com
+CREATED:20120612T113735Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/qxnqzcyscbsb/
+LAST-MODIFIED:20120612T113735Z
+UID:event_qxnqzcyscbsb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131015T100000
-DTEND;TZID=America/New_York:20131015T120000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140121T190000
+DTEND;TZID=America/New_York:20140121T220000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: BYOW Website Workshop
-DESCRIPTION:Gangplank RVA\nTuesday\, October 15 at 10:00 AM\n\nBYOW = Bri
- ng Your Own Website Want to build your own website or update the one you
-  have?  Want to develop and maintain a social media strategy that wo...\
- n\nDetails: http://www.meetup.com/GangplankRVA/events/dvfnngyrnbtb/
+SUMMARY:RVA Data Hackers
+DESCRIPTION:804RVA Technology Meetups & Coworking\nTuesday\, January 21 a
+ t 7:00 PM\n\nDetails: http://www.meetup.com/804RVA/events/dnlnffyscbcc/
 CLASS:PUBLIC
-CREATED:20130813T203612Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/dvfnngyrnbtb/
-LAST-MODIFIED:20130813T203612Z
-UID:event_dvfnngyrnbtb@meetup.com
+CREATED:20130117T181841Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/dnlnffyscbcc/
+LAST-MODIFIED:20130117T181841Z
+UID:event_dnlnffyscbcc@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131018T110000
-DTEND;TZID=America/New_York:20131018T130000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140122T180000
+DTEND;TZID=America/New_York:20140122T210000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: Entrepreneurs Friday Lunch Meeting
-DESCRIPTION:Gangplank RVA\nFriday\, October 18 at 11:00 AM\n\nThis is for
-  people interested in having conversations regarding real world issues i
- n running a small business (or starting a new one). Bring your lunc...\n
- \nDetails: http://www.meetup.com/GangplankRVA/events/qgfkkgyrnbxb/
+SUMMARY:RVA WordPress Wednesday
+DESCRIPTION:804RVA Technology Meetups & Coworking\nWednesday\, January 22
+  at 6:00 PM\n\nRVA WordPress Wednesday Meetups 4th Wednesday of Every Mo
+ nth! This group is for anyone who uses WordPress\, whether you're a blog
+ ger\, designer\, develop...\n\nDetails: http://www.meetup.com/804RVA/eve
+ nts/149469592/
 CLASS:PUBLIC
-CREATED:20130719T212834Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/qgfkkgyrnbxb/
-LAST-MODIFIED:20130719T212834Z
-UID:event_qgfkkgyrnbxb@meetup.com
+CREATED:20120511T220346Z
+GEO:37.54;-77.45
+LOCATION:804RVA (1657 West Broad Street\, Richmond\, VA 23220)
+URL:http://www.meetup.com/804RVA/events/149469592/
+LAST-MODIFIED:20130325T142822Z
+UID:event_dplhwcyscbdc@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131022T100000
-DTEND;TZID=America/New_York:20131022T120000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140124T180000
+DTEND;TZID=America/New_York:20140126T220000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: BYOW Website Workshop
-DESCRIPTION:Gangplank RVA\nTuesday\, October 22 at 10:00 AM\n\nBYOW = Bri
- ng Your Own Website Want to build your own website or update the one you
-  have?  Want to develop and maintain a social media strategy that wo...\
- n\nDetails: http://www.meetup.com/GangplankRVA/events/dvfnngyrnbdc/
+SUMMARY:Make video games for Global Game Jam 
+DESCRIPTION:804RVA Technology Meetups & Coworking\nFriday\, January 24 at
+  6:00 PM\n\nTo Be Announced. In the mean time register for GGJ at http:/
+ /globalgamejam.org/2014/jam-sites/richmond-va or check out http://www.rv
+ agamejams.com\n\nDetails: http://www.meetup.com/804RVA/events/150028022/
+ 
 CLASS:PUBLIC
-CREATED:20130813T203612Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/dvfnngyrnbdc/
-LAST-MODIFIED:20130813T203612Z
-UID:event_dvfnngyrnbdc@meetup.com
+CREATED:20131109T160739Z
+GEO:37.54;-77.45
+LOCATION:804RVA (1657 West Broad Street\, Richmond\, VA 23220)
+URL:http://www.meetup.com/804RVA/events/150028022/
+LAST-MODIFIED:20131109T160739Z
+UID:event_150028022@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131025T110000
-DTEND;TZID=America/New_York:20131025T130000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140203T183000
+DTEND;TZID=America/New_York:20140203T200000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: Entrepreneurs Friday Lunch Meeting
-DESCRIPTION:Gangplank RVA\nFriday\, October 25 at 11:00 AM\n\nThis is for
-  people interested in having conversations regarding real world issues i
- n running a small business (or starting a new one). Bring your lunc...\n
- \nDetails: http://www.meetup.com/GangplankRVA/events/qgfkkgyrnbhc/
+SUMMARY:Richmond Adobe User Group Meeting (RAUG)
+DESCRIPTION:804RVA Technology Meetups & Coworking\nMonday\, February 3 at
+  6:30 PM\n\nDetails: http://www.meetup.com/804RVA/events/djlbzcysdbfb/
 CLASS:PUBLIC
-CREATED:20130719T212834Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/qgfkkgyrnbhc/
-LAST-MODIFIED:20130719T212834Z
-UID:event_qgfkkgyrnbhc@meetup.com
+CREATED:20120604T215419Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/djlbzcysdbfb/
+LAST-MODIFIED:20130729T022730Z
+UID:event_djlbzcysdbfb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131029T100000
-DTEND;TZID=America/New_York:20131029T120000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140205T093000
+DTEND;TZID=America/New_York:20140205T123000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: BYOW Website Workshop
-DESCRIPTION:Gangplank RVA\nTuesday\, October 29 at 10:00 AM\n\nBYOW = Bri
- ng Your Own Website Want to build your own website or update the one you
-  have?  Want to develop and maintain a social media strategy that wo...\
- n\nDetails: http://www.meetup.com/GangplankRVA/events/dvfnngyrnbmc/
+SUMMARY:RVA Jelly Day= Free day of coworking with awesome people
+DESCRIPTION:804RVA Technology Meetups & Coworking\nWednesday\, February 5
+  at 9:30 AM\n\njoin us! free #RVAJelly coworking pass 'cause working alo
+ ne sucks & it's way more fun when you're around.'    creativity + collab
+ oration = coworking O...\n\nDetails: http://www.meetup.com/804RVA/events
+ /qslxcgysdbhb/
 CLASS:PUBLIC
-CREATED:20130813T203612Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/dvfnngyrnbmc/
-LAST-MODIFIED:20130813T203612Z
-UID:event_dvfnngyrnbmc@meetup.com
+CREATED:20130606T071017Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/qslxcgysdbhb/
+LAST-MODIFIED:20130606T071017Z
+UID:event_qslxcgysdbhb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131101T110000
-DTEND;TZID=America/New_York:20131101T130000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140211T180000
+DTEND;TZID=America/New_York:20140211T210000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: Entrepreneurs Friday Lunch Meeting
-DESCRIPTION:Gangplank RVA\nFriday\, November 1 at 11:00 AM\n\nThis is for
-  people interested in having conversations regarding real world issues i
- n running a small business (or starting a new one). Bring your lunc...\n
- \nDetails: http://www.meetup.com/GangplankRVA/events/qgfkkgyrpbcb/
+SUMMARY:Central Virginia Ruby Enthusiasts Group
+DESCRIPTION:804RVA Technology Meetups & Coworking\nTuesday\, February 11 
+ at 6:00 PM\n\n \n \n \n \n \n \n \n \n \nCVREG is the Ruby user group fo
+ r Richmond and the central Virginia area!\n\nDetails: http://www.meetup.
+ com/804RVA/events/qxnqzcysdbpb/
 CLASS:PUBLIC
-CREATED:20130719T212834Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/qgfkkgyrpbcb/
-LAST-MODIFIED:20130719T212834Z
-UID:event_qgfkkgyrpbcb@meetup.com
+CREATED:20120612T113735Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/qxnqzcysdbpb/
+LAST-MODIFIED:20120612T113735Z
+UID:event_qxnqzcysdbpb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131105T100000
-DTEND;TZID=America/New_York:20131105T120000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140218T190000
+DTEND;TZID=America/New_York:20140218T220000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: BYOW Website Workshop
-DESCRIPTION:Gangplank RVA\nTuesday\, November 5 at 10:00 AM\n\nBYOW = Bri
- ng Your Own Website Want to build your own website or update the one you
-  have?  Want to develop and maintain a social media strategy that wo...\
- n\nDetails: http://www.meetup.com/GangplankRVA/events/dvfnngyrpbhb/
+SUMMARY:RVA Data Hackers
+DESCRIPTION:804RVA Technology Meetups & Coworking\nTuesday\, February 18 
+ at 7:00 PM\n\nDetails: http://www.meetup.com/804RVA/events/dnlnffysdbxb/
+ 
 CLASS:PUBLIC
-CREATED:20130813T203612Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/dvfnngyrpbhb/
-LAST-MODIFIED:20130813T203612Z
-UID:event_dvfnngyrpbhb@meetup.com
+CREATED:20130117T181841Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/dnlnffysdbxb/
+LAST-MODIFIED:20130117T181841Z
+UID:event_dnlnffysdbxb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131106T180000
-DTEND;TZID=America/New_York:20131106T200000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140224T173000
+DTEND;TZID=America/New_York:20140224T193000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: The Bullpen (Practicing Your Pitch)
-DESCRIPTION:Gangplank RVA\nWednesday\, November 6 at 6:00 PM\n\nAre you r
- eady to pitch your idea to potential customers or investors?  Gangplank 
- RVA is offering a dedicated night for you to hone your message and ma...
- \n\nDetails: http://www.meetup.com/GangplankRVA/events/dkspqgyrpbjb/
+SUMMARY:Virginia Innovators Network (VINE)
+DESCRIPTION:804RVA Technology Meetups & Coworking\nMonday\, February 24 a
+ t 5:30 PM\n\nTopic: Show-n-Tell ### Virginia Innovators Network is a not
+  for profit\, educational organization. We exist to support innovative V
+ irginians who are pu...\n\nDetails: http://www.meetup.com/804RVA/events/
+ dmfhvgysdbgc/
 CLASS:PUBLIC
-CREATED:20130829T194206Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/dkspqgyrpbjb/
-LAST-MODIFIED:20130829T194206Z
-UID:event_dkspqgyrpbjb@meetup.com
+CREATED:20130925T223059Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/dmfhvgysdbgc/
+LAST-MODIFIED:20130925T223128Z
+UID:event_dmfhvgysdbgc@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131108T110000
-DTEND;TZID=America/New_York:20131108T130000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140226T180000
+DTEND;TZID=America/New_York:20140226T210000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: Entrepreneurs Friday Lunch Meeting
-DESCRIPTION:Gangplank RVA\nFriday\, November 8 at 11:00 AM\n\nThis is for
-  people interested in having conversations regarding real world issues i
- n running a small business (or starting a new one). Bring your lunc...\n
- \nDetails: http://www.meetup.com/GangplankRVA/events/qgfkkgyrpblb/
+SUMMARY:RVA WordPress Wednesday
+DESCRIPTION:804RVA Technology Meetups & Coworking\nWednesday\, February 2
+ 6 at 6:00 PM\n\nRVA WordPress Wednesday Meetups 4th Wednesday of Every M
+ onth! This group is for anyone who uses WordPress\, whether you're a blo
+ gger\, designer\, develop...\n\nDetails: http://www.meetup.com/804RVA/ev
+ ents/dplhwcysdbjc/
 CLASS:PUBLIC
-CREATED:20130719T212834Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/qgfkkgyrpblb/
-LAST-MODIFIED:20130719T212834Z
-UID:event_qgfkkgyrpblb@meetup.com
+CREATED:20120511T220346Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/dplhwcysdbjc/
+LAST-MODIFIED:20130325T142822Z
+UID:event_dplhwcysdbjc@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131112T100000
-DTEND;TZID=America/New_York:20131112T120000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140303T183000
+DTEND;TZID=America/New_York:20140303T200000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: BYOW Website Workshop
-DESCRIPTION:Gangplank RVA\nTuesday\, November 12 at 10:00 AM\n\nBYOW = Br
- ing Your Own Website Want to build your own website or update the one yo
- u have?  Want to develop and maintain a social media strategy that wo...
- \n\nDetails: http://www.meetup.com/GangplankRVA/events/dvfnngyrpbqb/
+SUMMARY:Richmond Adobe User Group Meeting (RAUG)
+DESCRIPTION:804RVA Technology Meetups & Coworking\nMonday\, March 3 at 6:
+ 30 PM\n\nDetails: http://www.meetup.com/804RVA/events/djlbzcysfbfb/
 CLASS:PUBLIC
-CREATED:20130813T203612Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/dvfnngyrpbqb/
-LAST-MODIFIED:20130813T203612Z
-UID:event_dvfnngyrpbqb@meetup.com
+CREATED:20120604T215419Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/djlbzcysfbfb/
+LAST-MODIFIED:20130729T022730Z
+UID:event_djlbzcysfbfb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131115T110000
-DTEND;TZID=America/New_York:20131115T130000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140305T093000
+DTEND;TZID=America/New_York:20140305T123000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: Entrepreneurs Friday Lunch Meeting
-DESCRIPTION:Gangplank RVA\nFriday\, November 15 at 11:00 AM\n\nThis is fo
- r people interested in having conversations regarding real world issues 
- in running a small business (or starting a new one). Bring your lunc...\
- n\nDetails: http://www.meetup.com/GangplankRVA/events/qgfkkgyrpbtb/
+SUMMARY:RVA Jelly Day= Free day of coworking with awesome people
+DESCRIPTION:804RVA Technology Meetups & Coworking\nWednesday\, March 5 at
+  9:30 AM\n\njoin us! free #RVAJelly coworking pass 'cause working alone 
+ sucks & it's way more fun when you're around.'    creativity + collabora
+ tion = coworking O...\n\nDetails: http://www.meetup.com/804RVA/events/qs
+ lxcgysfbhb/
 CLASS:PUBLIC
-CREATED:20130719T212834Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/qgfkkgyrpbtb/
-LAST-MODIFIED:20130719T212834Z
-UID:event_qgfkkgyrpbtb@meetup.com
+CREATED:20130606T071017Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/qslxcgysfbhb/
+LAST-MODIFIED:20130606T071017Z
+UID:event_qslxcgysfbhb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131119T100000
-DTEND;TZID=America/New_York:20131119T120000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140311T180000
+DTEND;TZID=America/New_York:20140311T210000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: BYOW Website Workshop
-DESCRIPTION:Gangplank RVA\nTuesday\, November 19 at 10:00 AM\n\nBYOW = Br
- ing Your Own Website Want to build your own website or update the one yo
- u have?  Want to develop and maintain a social media strategy that wo...
- \n\nDetails: http://www.meetup.com/GangplankRVA/events/dvfnngyrpbzb/
+SUMMARY:Central Virginia Ruby Enthusiasts Group
+DESCRIPTION:804RVA Technology Meetups & Coworking\nTuesday\, March 11 at 
+ 6:00 PM\n\n \n \n \n \n \n \n \n \n \nCVREG is the Ruby user group for R
+ ichmond and the central Virginia area!\n\nDetails: http://www.meetup.com
+ /804RVA/events/qxnqzcysfbpb/
 CLASS:PUBLIC
-CREATED:20130813T203612Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/dvfnngyrpbzb/
-LAST-MODIFIED:20130813T203612Z
-UID:event_dvfnngyrpbzb@meetup.com
+CREATED:20120612T113735Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/qxnqzcysfbpb/
+LAST-MODIFIED:20120612T113735Z
+UID:event_qxnqzcysfbpb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131122T110000
-DTEND;TZID=America/New_York:20131122T130000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140318T190000
+DTEND;TZID=America/New_York:20140318T220000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: Entrepreneurs Friday Lunch Meeting
-DESCRIPTION:Gangplank RVA\nFriday\, November 22 at 11:00 AM\n\nThis is fo
- r people interested in having conversations regarding real world issues 
- in running a small business (or starting a new one). Bring your lunc...\
- n\nDetails: http://www.meetup.com/GangplankRVA/events/qgfkkgyrpbdc/
+SUMMARY:RVA Data Hackers
+DESCRIPTION:804RVA Technology Meetups & Coworking\nTuesday\, March 18 at 
+ 7:00 PM\n\nDetails: http://www.meetup.com/804RVA/events/dnlnffysfbxb/
 CLASS:PUBLIC
-CREATED:20130719T212834Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/qgfkkgyrpbdc/
-LAST-MODIFIED:20130719T212834Z
-UID:event_qgfkkgyrpbdc@meetup.com
+CREATED:20130117T181841Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/dnlnffysfbxb/
+LAST-MODIFIED:20130117T181841Z
+UID:event_dnlnffysfbxb@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131126T100000
-DTEND;TZID=America/New_York:20131126T120000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140324T173000
+DTEND;TZID=America/New_York:20140324T193000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: BYOW Website Workshop
-DESCRIPTION:Gangplank RVA\nTuesday\, November 26 at 10:00 AM\n\nBYOW = Br
- ing Your Own Website Want to build your own website or update the one yo
- u have?  Want to develop and maintain a social media strategy that wo...
- \n\nDetails: http://www.meetup.com/GangplankRVA/events/dvfnngyrpbjc/
+SUMMARY:Virginia Innovators Network (VINE)
+DESCRIPTION:804RVA Technology Meetups & Coworking\nMonday\, March 24 at 5
+ :30 PM\n\nTopic: Show-n-Tell ### Virginia Innovators Network is a not fo
+ r profit\, educational organization. We exist to support innovative Virg
+ inians who are pu...\n\nDetails: http://www.meetup.com/804RVA/events/dmf
+ hvgysfbgc/
 CLASS:PUBLIC
-CREATED:20130813T203612Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/dvfnngyrpbjc/
-LAST-MODIFIED:20130813T203612Z
-UID:event_dvfnngyrpbjc@meetup.com
+CREATED:20130925T223059Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/dmfhvgysfbgc/
+LAST-MODIFIED:20130925T223128Z
+UID:event_dmfhvgysfbgc@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131129T110000
-DTEND;TZID=America/New_York:20131129T130000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140326T180000
+DTEND;TZID=America/New_York:20140326T210000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: Entrepreneurs Friday Lunch Meeting
-DESCRIPTION:Gangplank RVA\nFriday\, November 29 at 11:00 AM\n\nThis is fo
- r people interested in having conversations regarding real world issues 
- in running a small business (or starting a new one). Bring your lunc...\
- n\nDetails: http://www.meetup.com/GangplankRVA/events/qgfkkgyrpbmc/
+SUMMARY:RVA WordPress Wednesday
+DESCRIPTION:804RVA Technology Meetups & Coworking\nWednesday\, March 26 a
+ t 6:00 PM\n\nRVA WordPress Wednesday Meetups 4th Wednesday of Every Mont
+ h! This group is for anyone who uses WordPress\, whether you're a blogge
+ r\, designer\, develop...\n\nDetails: http://www.meetup.com/804RVA/event
+ s/dplhwcysfbjc/
 CLASS:PUBLIC
-CREATED:20130719T212834Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/qgfkkgyrpbmc/
-LAST-MODIFIED:20130719T212834Z
-UID:event_qgfkkgyrpbmc@meetup.com
+CREATED:20120511T220346Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/dplhwcysfbjc/
+LAST-MODIFIED:20130325T142822Z
+UID:event_dplhwcysfbjc@meetup.com
 END:VEVENT
 BEGIN:VEVENT
-DTSTAMP:20130924T182308Z
-DTSTART;TZID=America/New_York:20131204T180000
-DTEND;TZID=America/New_York:20131204T200000
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140402T093000
+DTEND;TZID=America/New_York:20140402T123000
 STATUS:CONFIRMED
-SUMMARY:Gangplank RVA: The Bullpen (Practicing Your Pitch)
-DESCRIPTION:Gangplank RVA\nWednesday\, December 4 at 6:00 PM\n\nAre you r
- eady to pitch your idea to potential customers or investors?  Gangplank 
- RVA is offering a dedicated night for you to hone your message and ma...
- \n\nDetails: http://www.meetup.com/GangplankRVA/events/dkspqgyrqbgb/
+SUMMARY:RVA Jelly Day= Free day of coworking with awesome people
+DESCRIPTION:804RVA Technology Meetups & Coworking\nWednesday\, April 2 at
+  9:30 AM\n\njoin us! free #RVAJelly coworking pass 'cause working alone 
+ sucks & it's way more fun when you're around.'    creativity + collabora
+ tion = coworking O...\n\nDetails: http://www.meetup.com/804RVA/events/qs
+ lxcgysgbdb/
 CLASS:PUBLIC
-CREATED:20130829T194206Z
-GEO:37.59;-77.50
-URL:http://www.meetup.com/GangplankRVA/events/dkspqgyrqbgb/
-LAST-MODIFIED:20130829T194206Z
-UID:event_dkspqgyrqbgb@meetup.com
+CREATED:20130606T071017Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/qslxcgysgbdb/
+LAST-MODIFIED:20130606T071017Z
+UID:event_qslxcgysgbdb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140407T183000
+DTEND;TZID=America/New_York:20140407T200000
+STATUS:CONFIRMED
+SUMMARY:Richmond Adobe User Group Meeting (RAUG)
+DESCRIPTION:804RVA Technology Meetups & Coworking\nMonday\, April 7 at 6:
+ 30 PM\n\nDetails: http://www.meetup.com/804RVA/events/djlbzcysgbkb/
+CLASS:PUBLIC
+CREATED:20120604T215419Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/djlbzcysgbkb/
+LAST-MODIFIED:20130729T022730Z
+UID:event_djlbzcysgbkb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140408T180000
+DTEND;TZID=America/New_York:20140408T210000
+STATUS:CONFIRMED
+SUMMARY:Central Virginia Ruby Enthusiasts Group
+DESCRIPTION:804RVA Technology Meetups & Coworking\nTuesday\, April 8 at 6
+ :00 PM\n\n \n \n \n \n \n \n \n \n \nCVREG is the Ruby user group for Ri
+ chmond and the central Virginia area!\n\nDetails: http://www.meetup.com/
+ 804RVA/events/qxnqzcysgblb/
+CLASS:PUBLIC
+CREATED:20120612T113735Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/qxnqzcysgblb/
+LAST-MODIFIED:20120612T113735Z
+UID:event_qxnqzcysgblb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140415T190000
+DTEND;TZID=America/New_York:20140415T220000
+STATUS:CONFIRMED
+SUMMARY:RVA Data Hackers
+DESCRIPTION:804RVA Technology Meetups & Coworking\nTuesday\, April 15 at 
+ 7:00 PM\n\nDetails: http://www.meetup.com/804RVA/events/dnlnffysgbtb/
+CLASS:PUBLIC
+CREATED:20130117T181841Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/dnlnffysgbtb/
+LAST-MODIFIED:20130117T181841Z
+UID:event_dnlnffysgbtb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140423T180000
+DTEND;TZID=America/New_York:20140423T210000
+STATUS:CONFIRMED
+SUMMARY:RVA WordPress Wednesday
+DESCRIPTION:804RVA Technology Meetups & Coworking\nWednesday\, April 23 a
+ t 6:00 PM\n\nRVA WordPress Wednesday Meetups 4th Wednesday of Every Mont
+ h! This group is for anyone who uses WordPress\, whether you're a blogge
+ r\, designer\, develop...\n\nDetails: http://www.meetup.com/804RVA/event
+ s/dplhwcysgbfc/
+CLASS:PUBLIC
+CREATED:20120511T220346Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/dplhwcysgbfc/
+LAST-MODIFIED:20130325T142822Z
+UID:event_dplhwcysgbfc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140428T173000
+DTEND;TZID=America/New_York:20140428T193000
+STATUS:CONFIRMED
+SUMMARY:Virginia Innovators Network (VINE)
+DESCRIPTION:804RVA Technology Meetups & Coworking\nMonday\, April 28 at 5
+ :30 PM\n\nTopic: Show-n-Tell ### Virginia Innovators Network is a not fo
+ r profit\, educational organization. We exist to support innovative Virg
+ inians who are pu...\n\nDetails: http://www.meetup.com/804RVA/events/dmf
+ hvgysgblc/
+CLASS:PUBLIC
+CREATED:20130925T223059Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/dmfhvgysgblc/
+LAST-MODIFIED:20130925T223128Z
+UID:event_dmfhvgysgblc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140505T183000
+DTEND;TZID=America/New_York:20140505T200000
+STATUS:CONFIRMED
+SUMMARY:Richmond Adobe User Group Meeting (RAUG)
+DESCRIPTION:804RVA Technology Meetups & Coworking\nMonday\, May 5 at 6:30
+  PM\n\nDetails: http://www.meetup.com/804RVA/events/djlbzcyshbhb/
+CLASS:PUBLIC
+CREATED:20120604T215419Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/djlbzcyshbhb/
+LAST-MODIFIED:20130729T022730Z
+UID:event_djlbzcyshbhb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140507T093000
+DTEND;TZID=America/New_York:20140507T123000
+STATUS:CONFIRMED
+SUMMARY:RVA Jelly Day= Free day of coworking with awesome people
+DESCRIPTION:804RVA Technology Meetups & Coworking\nWednesday\, May 7 at 9
+ :30 AM\n\njoin us! free #RVAJelly coworking pass 'cause working alone su
+ cks & it's way more fun when you're around.'    creativity + collaborati
+ on = coworking O...\n\nDetails: http://www.meetup.com/804RVA/events/qslx
+ cgyshbkb/
+CLASS:PUBLIC
+CREATED:20130606T071017Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/qslxcgyshbkb/
+LAST-MODIFIED:20130606T071017Z
+UID:event_qslxcgyshbkb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140513T180000
+DTEND;TZID=America/New_York:20140513T210000
+STATUS:CONFIRMED
+SUMMARY:Central Virginia Ruby Enthusiasts Group
+DESCRIPTION:804RVA Technology Meetups & Coworking\nTuesday\, May 13 at 6:
+ 00 PM\n\n \n \n \n \n \n \n \n \n \nCVREG is the Ruby user group for Ric
+ hmond and the central Virginia area!\n\nDetails: http://www.meetup.com/8
+ 04RVA/events/qxnqzcyshbrb/
+CLASS:PUBLIC
+CREATED:20120612T113735Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/qxnqzcyshbrb/
+LAST-MODIFIED:20120612T113735Z
+UID:event_qxnqzcyshbrb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140519T173000
+DTEND;TZID=America/New_York:20140519T193000
+STATUS:CONFIRMED
+SUMMARY:Virginia Innovators Network (VINE)
+DESCRIPTION:804RVA Technology Meetups & Coworking\nMonday\, May 19 at 5:3
+ 0 PM\n\nTopic: Show-n-Tell ### Virginia Innovators Network is a not for 
+ profit\, educational organization. We exist to support innovative Virgin
+ ians who are pu...\n\nDetails: http://www.meetup.com/804RVA/events/14222
+ 6672/
+CLASS:PUBLIC
+CREATED:20130925T223359Z
+GEO:37.54;-77.45
+LOCATION:804RVA (1657 West Broad Street\, Richmond\, VA 23220)
+URL:http://www.meetup.com/804RVA/events/142226672/
+LAST-MODIFIED:20130925T223359Z
+UID:event_dmfhvgyshbjc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140520T190000
+DTEND;TZID=America/New_York:20140520T220000
+STATUS:CONFIRMED
+SUMMARY:RVA Data Hackers
+DESCRIPTION:804RVA Technology Meetups & Coworking\nTuesday\, May 20 at 7:
+ 00 PM\n\nDetails: http://www.meetup.com/804RVA/events/dnlnffyshbbc/
+CLASS:PUBLIC
+CREATED:20130117T181841Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/dnlnffyshbbc/
+LAST-MODIFIED:20130117T181841Z
+UID:event_dnlnffyshbbc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140528T180000
+DTEND;TZID=America/New_York:20140528T210000
+STATUS:CONFIRMED
+SUMMARY:RVA WordPress Wednesday
+DESCRIPTION:804RVA Technology Meetups & Coworking\nWednesday\, May 28 at 
+ 6:00 PM\n\nRVA WordPress Wednesday Meetups 4th Wednesday of Every Month!
+  This group is for anyone who uses WordPress\, whether you're a blogger\
+ , designer\, develop...\n\nDetails: http://www.meetup.com/804RVA/events/
+ dplhwcyshblc/
+CLASS:PUBLIC
+CREATED:20120511T220346Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/dplhwcyshblc/
+LAST-MODIFIED:20130325T142822Z
+UID:event_dplhwcyshblc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20140602T183000
+DTEND;TZID=America/New_York:20140602T200000
+STATUS:CONFIRMED
+SUMMARY:Richmond Adobe User Group Meeting (RAUG)
+DESCRIPTION:804RVA Technology Meetups & Coworking\nMonday\, June 2 at 6:3
+ 0 PM\n\nDetails: http://www.meetup.com/804RVA/events/djlbzcysjbdb/
+CLASS:PUBLIC
+CREATED:20120604T215419Z
+GEO:37.54;-77.45
+URL:http://www.meetup.com/804RVA/events/djlbzcysjbdb/
+LAST-MODIFIED:20130729T022730Z
+UID:event_djlbzcysjbdb@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20141117T173000
+DTEND;TZID=America/New_York:20141117T193000
+STATUS:CONFIRMED
+SUMMARY:Virginia Innovators Network (VINE)
+DESCRIPTION:804RVA Technology Meetups & Coworking\nMonday\, November 17 a
+ t 5:30 PM\n\nTopic: Show-n-Tell ### Virginia Innovators Network is a not
+  for profit\, educational organization. We exist to support innovative V
+ irginians who are pu...\n\nDetails: http://www.meetup.com/804RVA/events/
+ 142226822/
+CLASS:PUBLIC
+CREATED:20130925T223452Z
+GEO:37.54;-77.45
+LOCATION:804RVA (1657 West Broad Street\, Richmond\, VA 23220)
+URL:http://www.meetup.com/804RVA/events/142226822/
+LAST-MODIFIED:20130925T223452Z
+UID:event_dmfhvgyspbgc@meetup.com
+END:VEVENT
+BEGIN:VEVENT
+DTSTAMP:20131204T174355Z
+DTSTART;TZID=America/New_York:20141215T173000
+DTEND;TZID=America/New_York:20141215T193000
+STATUS:CONFIRMED
+SUMMARY:Virginia Innovators Network (VINE)
+DESCRIPTION:804RVA Technology Meetups & Coworking\nMonday\, December 15 a
+ t 5:30 PM\n\nTopic: Show-n-Tell ### Virginia Innovators Network is a not
+  for profit\, educational organization. We exist to support innovative V
+ irginians who are pu...\n\nDetails: http://www.meetup.com/804RVA/events/
+ 142226962/
+CLASS:PUBLIC
+CREATED:20130925T223605Z
+GEO:37.54;-77.45
+LOCATION:804RVA (1657 West Broad Street\, Richmond\, VA 23220)
+URL:http://www.meetup.com/804RVA/events/142226962/
+LAST-MODIFIED:20130925T223605Z
+UID:event_dmfhvgysqbdc@meetup.com
 END:VEVENT
 END:VCALENDAR

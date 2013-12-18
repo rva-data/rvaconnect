@@ -73,8 +73,8 @@ class Event(TimeStampedModel, TimeFramedModel):
     def save(self, *args, **kwargs):
         self.description = markdown.markdown(self.description_markdown,
                 output_format='html5')
-        #if not self.uid:
-        #    self.uid =
+        if not self.uid:
+            self.uid = "event_{pk}@rvaconnect.com".format(pk=self.pk)
         return super(Event, self).save(*args, **kwargs)
 
     def get_absolute_url(self):

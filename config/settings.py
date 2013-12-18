@@ -151,6 +151,7 @@ INSTALLED_APPS = (
     'waffle',
     #'addendum',
     'connector.circles',
+    'connector.calendars',
     'connector.events',
     'connector.places',
 )
@@ -227,6 +228,7 @@ SESSION_COOKIE_HTTPONLY = env_var('SESSION_COOKIE_HTTPONLY', False)
 #
 #####################################################################
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+SOUTH_TESTS_MIGRATE = False
 
 
 ###########################################################
