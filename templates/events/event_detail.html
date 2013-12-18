@@ -7,7 +7,7 @@
         <div class="lead">
         {{ event.description|safe }}
         </div>
-        <p>{{ event.location }}</p>
+        {% if event.location %}<p>{{ event.location }}</p>{% endif %}
         <p><a href="{{ event.url }}">See the source</a></p>
         <h3>Share a tip or ask a question</h3>
         {% include "includes/disqus_comments.html" %}
