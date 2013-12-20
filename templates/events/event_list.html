@@ -13,7 +13,7 @@
           <h2 class="hdr-month hdr-month-{{ event_month.grouper }}">{{ event_month.grouper|month_name }}</h2>
           {% for event in event_month.list %}
             <div class="event" itemscope itemtype="http://schema.org/Event">
-              <h3><a href="{{ event.get_absolute_url }}">{{ event.name }}</a></h3>
+              <h3 itemprop="name"><a href="{{ event.get_absolute_url }}">{{ event.name }}</a></h3>
               <a name="event-{{ forloop.counter }}"></a>
               <p itemprop="description">{{ event.description|striptags|truncatewords:20|safe }}</p>
               <p>{{ event.start }}{% if event.end %} &mdash; {{ event.end }}{% endif %}</p>

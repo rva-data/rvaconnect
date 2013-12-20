@@ -35,10 +35,15 @@
             <div class="col-md-6">
               <h2>Upcoming Events</h3>
               {% for event in events_list %}
-                <h3>{{ event.name }}</h3>
-                <p>{{ event.description|striptags|truncatewords:20|safe }}</p>
+              <div itemscope itemtype="http://schema.org/Event">
+                <h3 itemprop="name">{{ event.name }}</h3>
+                <p itemprop="description">{{ event.description|striptags|truncatewords:20|safe }}</p>
                 <p>{{ event.start }}{% if event.end %} &mdash; {{ event.end }}{% endif %}</p>
                 <a href="{{ event.get_absolute_url }}">Get all the info &gt;&gt;</a>
+                <meta itemprop="startDate" content="{{ event.start|date:"c" }}">
+                {% if event.end %}<meta itemprop="endDate" content="{{ event.end|date:"c" }}">{% endif %}
+                <meta itemprop="url" content="{{ event.url }}">
+              </div>
               {% endfor %}
               <h3>
                 <a href="{% url 'event_list' %}#event-4">See more events</a>
