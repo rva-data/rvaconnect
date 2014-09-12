@@ -1,0 +1,19 @@
+#!/bin/bash
+./heroku staging pipeline:diff
+read -p "Is this ready to promote to production? (y/n) " CONFIRM
+case "$CONFIRM" in
+  y)
+    ;;
+  Y)
+    ;;
+  *)
+    echo "Not promoting to production"
+    exit
+    ;;
+esac
+
+printf "Promoting to production...\n"
+./heroku staging pipeline:promote
+./run production syncdb --noinput
+./run production migrate
+./run production collectstatic --noinput
