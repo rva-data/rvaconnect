@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# This script handles all post-Git push commands for Heroku deployment
+#
+# Usage:
+# > ./run <environment> <some command>
+#
+# Example:
+# > ./run staging collectstatic
+
+usage()
+{
+cat << EOF
+usage: $0 <environment_name> <commands> <args> <options>
+
+This script wraps calls to the heroku toolbelt 'run' command for staging and
+production environments without recourse to verbose app name arguments or
+needing to specify the 'run' command or path to Django's 'manage.py'.
+
+Specify an active environment name, either 'staging' or 'production'
+EOF
+}
+
+# This is just a guard for the env name
+case "$1" in
+  staging)
+    ;;
+  production)
+    ;;
+  *)
+    usage
+    exit
+    ;;
+esac
+
+./heroku "$1" run python afficon/manage.py "${@:2}"

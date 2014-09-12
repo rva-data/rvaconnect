@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# This script controls the app environment for Heroku commands
+#
+# Usage:
+# > ./heroku <environment> <some command>
+#
+# Example:
+# > ./heroku staging config:set MY_ENV_VAR=something
+
+usage()
+{
+cat << EOF
+usage: $0 <environment_name> <commands> <args> <options>
+
+This script wraps calls to the heroku toolbelt, allowing for simple access to
+staging and production environments without recourse to verbose app name
+arguments.
+
+Specify an active environment name, either 'staging' or 'production'
+EOF
+}
+
+case "$1" in
+  staging)
+    APPNAME=rvaconnect-staging
+    ;;
+  production)
+    APPNAME=rvaconnect
+    ;;
+  *)
+    usage
+    exit
+    ;;
+esac
+
+printf "\nExecuting in the $1 environment\n"
+printf "heroku ${@:2} --app=$APPNAME\n\n"
+
+heroku "${@:2}" --app="$APPNAME"

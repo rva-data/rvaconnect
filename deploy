@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# This script handles all post-Git push commands for Heroku deployment
+
+case "$1" in
+  staging)
+    ENVNAME=staging
+    ;;
+  production)
+    ENVNAME=production
+    ;;
+  "")
+    ENVNAME=staging
+    printf "No environment, defaulting to staging"
+    ;;
+  *)
+    printf "Bad environment name. Use 'staging' or 'production'\n\n"
+    exit
+    ;;
+esac
+
+git push heroku-$ENVNAME master
+./run "$ENVNAME" migrate
