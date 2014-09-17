@@ -2,5 +2,6 @@
 #	production that isn't in development.
 -r base.txt
 
-gunicorn==18.0
-gevent==1.0.1
+gunicorn==19.1.1
+# No Python 3 support for gevent
+# gevent==1.0.1
