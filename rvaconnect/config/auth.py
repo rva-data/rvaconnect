@@ -1,3 +1,6 @@
+import base64
+
+
 class BasicAuthMiddleware(object):
 
     def __init__(self, app, username, password, realm='protected'):
@@ -13,7 +16,7 @@ class BasicAuthMiddleware(object):
         if auth:
             #Authentication provided, check it
             scheme, credentials = auth.split(None, 1)
-            username, password = credentials.decode('base64').split(':', 1)
+            username, password = base64.b64decode(credentials).decode().split(':', 1)
             if username == self.username and password == self.password:
                 #Authentication valid. Return as normal
                 return self.app(environ, start_response)
