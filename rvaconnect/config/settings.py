@@ -342,11 +342,6 @@ class Production(Common):
     }
 
     ########## STORAGE CONFIGURATION
-    # See: http://django-storages.readthedocs.org/en/latest/index.html
-    INSTALLED_APPS += (
-        'storages',
-    )
-
     STATIC_URL = '/static/'
     ########## END STORAGE CONFIGURATION
 
