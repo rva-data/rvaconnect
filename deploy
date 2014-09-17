@@ -19,5 +19,6 @@ case "$1" in
     ;;
 esac
 
-git push heroku-$ENVNAME master
+git push heroku master
+./run "$ENVNAME" syncdb --noinput
 ./run "$ENVNAME" migrate

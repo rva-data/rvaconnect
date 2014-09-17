@@ -1,0 +1,29 @@
+machine:
+  timezone:
+    America/New_York
+
+  environment:
+    DEBUG: True
+    DATABASE_URL: postgres://localhost/circle_test
+    COMPRESS_ENABLED: "False"
+    COMPRESS_OFFLINE: "False"
+    THUMBNAIL_DEBUG: "False"
+
+dependencies:
+  override:
+    - pip install -r requirements/test.txt --exists-action=w
+
+test:
+  override:
+    - CIRCLECI=True python rvaconnect/manage.py test
+    - CIRCLECI=True flake8 rvaconnect
+    - ./scripts/curly-spacing.sh -d rvaconnect/templates
+    - ./scripts/django-url.sh -d rvaconnect/templates
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - git push git@heroku.com:rvaconnect.git $CIRCLE_SHA1:master
+      - heroku run python rvaconnect/manage.py syncdb --noinput
+      - heroku run python rvaconnect/manage.py migrate

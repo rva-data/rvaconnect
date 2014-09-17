@@ -5,6 +5,7 @@ from places.models import FeaturedPlace
 
 def index(request):
     """
+    Renders the index page, the primary landing page.
     """
     place = FeaturedPlace.objects.featured()
     events_list = Event.current.all()[:3]

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# This is a pre-commit hook that will run only when attempting to commit on the
+# master branch. It will run flake8 against specified Python source code
+# to ensure that it meets project standards before being committed to the
+# master branch.
+
+# You MUST edit this script to include the specific path to your virtualenv,
+# e.g. /Users/me/.virtualenvs/myenv/bin/flake8
+
+# Then copy this file so it's path is `.git/hooks/pre-commit` with respect to
+# the root of the project repository.
+
+if [ `git rev-parse --abbrev-ref HEAD` == "master" ]; then
+    /<path-to-virtualenv>/bin/flake8 rvaconnect
+fi

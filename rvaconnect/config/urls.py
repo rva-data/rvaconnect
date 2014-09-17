@@ -12,6 +12,6 @@ urlpatterns = patterns('',
     url(r'^$', view=index, name="index"),
     url(r'^home/$', view=TemplateView.as_view(template_name="home.html"), name='index'),
     url(r'^about/$', view=TemplateView.as_view(template_name="about.html"), name='about'),
-    url(r'events/', include('connector.events.urls')),
-    url(r'spaces/', include('connector.places.urls')),
+    url(r'events/', include('events.urls')),
+    url(r'spaces/', include('places.urls')),
 )

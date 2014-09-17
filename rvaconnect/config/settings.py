@@ -1,259 +1,386 @@
+# -*- coding: utf-8 -*-
+"""
+Django settings for rvaconnect project.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/dev/topics/settings/
+
+For the full list of settings and their values, see
+https://docs.djangoproject.com/en/dev/ref/settings/
+"""
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-import sys
-import dj_database_url
+from os.path import join
+from configurations import Configuration, values
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
-def env_var(key, default=None):
-    """Retrieves env vars and makes Python boolean replacements"""
-    val = os.environ.get(key, default)
-    if val == 'True':
-        val = True
-    elif val == 'False':
-        val = False
-    return val
+class Common(Configuration):
 
+    ########## APP CONFIGURATION
+    DJANGO_APPS = (
+        # Default Django apps:
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.sites',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
 
-DEBUG = env_var('DEBUG', False)
-TEMPLATE_DEBUG = DEBUG
+        # Useful template tags:
+        # 'django.contrib.humanize',
 
-ADMINS = (
-    ('Ben Lopatin', 'ben@wellfire.co'),
-)
+        # Admin
+        'django.contrib.admin',
+    )
+    THIRD_PARTY_APPS = (
+        #'south',  # Database migration helpers:
+        'crispy_forms',  # Form layouts
+        'avatar',  # for user avatars
+    )
 
-MANAGERS = ADMINS
+    # Apps specific for this project go here.
+    LOCAL_APPS = (
+        'users',  # custom users app
+        # Your stuff: custom apps go here
+        'circles',
+        'calendars',
+        'events',
+        'places',
+    )
 
-DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
+    INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
-BASE_DIR = os.path.dirname(__file__)
-PROJECT_ROOT = os.path.abspath(os.path.dirname(BASE_DIR))
-sys.path.append(os.path.join(PROJECT_ROOT, 'connector/'))
+    INSTALLED_APPS += (
+        # Needs to come last for now because of a weird edge case between
+        #   South and allauth
+        'allauth',  # registration
+        'allauth.account',  # registration
+        'allauth.socialaccount',  # registration
+    )
+    ########## END APP CONFIGURATION
 
+    ########## MIDDLEWARE CONFIGURATION
+    MIDDLEWARE_CLASSES = (
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware',
+        'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    )
+    ########## END MIDDLEWARE CONFIGURATION
 
-# Local time zone for this installation. Choices can be found here:
-# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-# although not all choices may be available on all operating systems.
-# On Unix systems, a value of None will cause Django to use the same
-# timezone as the operating system.
-# If running in a Windows environment this must be set to the same as your
-# system time zone.
-TIME_ZONE = 'America/New_York'
+    ########## DEBUG
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#debug
+    DEBUG = values.BooleanValue(False)
 
-# Language code for this installation. All choices can be found here:
-# http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-debug
+    TEMPLATE_DEBUG = DEBUG
+    ########## END DEBUG
 
-SITE_ID = 1
+    ########## SECRET CONFIGURATION
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
+    # Note: This key only used for development and testing.
+    #       In production, this is changed to a values.SecretValue() setting
+    SECRET_KEY = "CHANGEME!!!"
+    ########## END SECRET CONFIGURATION
 
-# If you set this to False, Django will make some optimizations so as not
-# to load the internationalization machinery.
-USE_I18N = True
+    ########## FIXTURE CONFIGURATION
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-FIXTURE_DIRS
+    FIXTURE_DIRS = (
+        join(BASE_DIR, 'fixtures'),
+    )
+    ########## END FIXTURE CONFIGURATION
 
-# If you set this to False, Django will not format dates, numbers and
-# calendars according to the current locale.
-USE_L10N = True
+    ########## EMAIL CONFIGURATION
+    EMAIL_BACKEND = values.Value('django.core.mail.backends.smtp.EmailBackend')
+    ########## END EMAIL CONFIGURATION
 
-# If you set this to False, Django will not use timezone-aware datetimes.
-USE_TZ = True
+    ########## MANAGER CONFIGURATION
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
+    ADMINS = (
+        ('Ben Lopatin', 'ben@wellfire.co'),
+    )
 
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
+    MANAGERS = ADMINS
+    ########## END MANAGER CONFIGURATION
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash.
-# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = ''
+    ########## DATABASE CONFIGURATION
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
+    DATABASES = values.DatabaseURLValue('postgres://localhost/rvaconnect')
+    ########## END DATABASE CONFIGURATION
 
-# Absolute path to the directory static files should be collected to.
-# Don't put anything in this directory yourself; store your static files
-# in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = env_var('STATIC_ROOT',
-        os.path.join(PROJECT_ROOT, 'collectedstaticfiles/'))
-
-# Additional locations of static files
-STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    (os.path.join(PROJECT_ROOT, 'static/')),
-)
-
-STATICFILES_STORAGE = env_var('STATICFILES_STORAGE', 'django.contrib.staticfiles.storage.StaticFilesStorage')
-
-# List of finder classes that know how to find static files in
-# various locations.
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-)
-
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = env_var('SECRET_KEY', '_n7y(&amp;^^&amp;+7)=yn^giy(&amp;(#9za1y&amp;_htg347m$uukkr230^+*s')
-
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-    #'django.template.loaders.eggs.Loader',
-)
-
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.debug',
-    'django.core.context_processors.request',
-    'django.contrib.auth.context_processors.auth',
-    'django.core.context_processors.media',
-)
-
-MIDDLEWARE_CLASSES = (
-    'djangosecure.middleware.SecurityMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
-
-ROOT_URLCONF = 'config.urls'
-
-# Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'config.wsgi.application'
-
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_ROOT, 'templates/'),
-)
-
-INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.admin',
-
-    'gunicorn',
-    'django_extensions',
-    'djangosecure',
-    'raven.contrib.django.raven_compat',
-    'south',
-    'storages',
-    #'compressor',
-    'django_nose',
-    #'djcelery',
-    #'floppyforms',
-    #'form_utils',
-    #'djcelery_email',
-    'waffle',
-    #'addendum',
-    'connector.circles',
-    'connector.calendars',
-    'connector.events',
-    'connector.places',
-)
-
-# A sample logging configuration. The only tangible logging
-# performed by this configuration is to send an email to
-# the site admins on every HTTP 500 error when DEBUG=False.
-# See http://docs.djangoproject.com/en/dev/topics/logging for
-# more details on how to customize your logging configuration.
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
+    ########## CACHING
+    # Do this here because thanks to django-pylibmc-sasl and pylibmc memcacheify is painful to install on windows.
+    # memcacheify is what's used in Production
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+            'LOCATION': ''
         }
-    },
-    'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
-        }
-    },
-    'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
     }
-}
+    ########## END CACHING
+
+    ########## GENERAL CONFIGURATION
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#time-zone
+    TIME_ZONE = 'America/Los_Angeles'
+
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#language-code
+    LANGUAGE_CODE = 'en-us'
+
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#site-id
+    SITE_ID = 1
+
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#use-i18n
+    USE_I18N = True
+
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#use-l10n
+    USE_L10N = True
+
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#use-tz
+    USE_TZ = True
+    ########## END GENERAL CONFIGURATION
+
+    ########## TEMPLATE CONFIGURATION
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-context-processors
+    TEMPLATE_CONTEXT_PROCESSORS = (
+        'django.contrib.auth.context_processors.auth',
+        "allauth.account.context_processors.account",
+        "allauth.socialaccount.context_processors.socialaccount",
+        'django.core.context_processors.debug',
+        'django.core.context_processors.i18n',
+        'django.core.context_processors.media',
+        'django.core.context_processors.static',
+        'django.core.context_processors.tz',
+        'django.contrib.messages.context_processors.messages',
+        'django.core.context_processors.request',
+        # Your stuff: custom template context processers go here
+    )
+
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
+    TEMPLATE_DIRS = (
+        join(BASE_DIR, 'templates'),
+    )
+
+    TEMPLATE_LOADERS = (
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+    )
+
+    # See: http://django-crispy-forms.readthedocs.org/en/latest/install.html#template-packs
+    CRISPY_TEMPLATE_PACK = 'bootstrap3'
+    ########## END TEMPLATE CONFIGURATION
+
+    ########## STATIC FILE CONFIGURATION
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
+    STATIC_ROOT = join(os.path.dirname(BASE_DIR), 'staticfiles')
+
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
+    STATIC_URL = '/static/'
+
+    # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
+    STATICFILES_DIRS = (
+        join(BASE_DIR, 'static'),
+    )
+
+    # See: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
+    STATICFILES_FINDERS = (
+        'django.contrib.staticfiles.finders.FileSystemFinder',
+        'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    )
+    ########## END STATIC FILE CONFIGURATION
+
+    ########## MEDIA CONFIGURATION
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-root
+    MEDIA_ROOT = join(BASE_DIR, 'media')
+
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-url
+    MEDIA_URL = '/media/'
+    ########## END MEDIA CONFIGURATION
+
+    ########## URL Configuration
+    ROOT_URLCONF = 'config.urls'
+
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
+    WSGI_APPLICATION = 'config.wsgi.application'
+    ########## End URL Configuration
+
+    ########## AUTHENTICATION CONFIGURATION
+    AUTHENTICATION_BACKENDS = (
+        "django.contrib.auth.backends.ModelBackend",
+        "allauth.account.auth_backends.AuthenticationBackend",
+    )
+
+    # Some really nice defaults
+    ACCOUNT_AUTHENTICATION_METHOD = "username"
+    ACCOUNT_EMAIL_REQUIRED = True
+    ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+    ########## END AUTHENTICATION CONFIGURATION
+
+    ########## Custom user app defaults
+    # Select the correct user model
+    AUTH_USER_MODEL = "users.User"
+    LOGIN_REDIRECT_URL = "users:redirect"
+    LOGIN_URL = "account_login"
+    ########## END Custom user app defaults
+
+    ########## SLUGLIFIER
+    AUTOSLUG_SLUGIFY_FUNCTION = "slugify.slugify"
+    ########## END SLUGLIFIER
+
+    ########## LOGGING CONFIGURATION
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#logging
+    # A sample logging configuration. The only tangible logging
+    # performed by this configuration is to send an email to
+    # the site admins on every HTTP 500 error when DEBUG=False.
+    # See http://docs.djangoproject.com/en/dev/topics/logging for
+    # more details on how to customize your logging configuration.
+    LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'filters': {
+            'require_debug_false': {
+                '()': 'django.utils.log.RequireDebugFalse'
+            }
+        },
+        'handlers': {
+            'mail_admins': {
+                'level': 'ERROR',
+                'filters': ['require_debug_false'],
+                'class': 'django.utils.log.AdminEmailHandler'
+            }
+        },
+        'loggers': {
+            'django.request': {
+                'handlers': ['mail_admins'],
+                'level': 'ERROR',
+                'propagate': True,
+            },
+        }
+    }
+    ########## END LOGGING CONFIGURATION
 
 
-###########################################################
-# AWS settings
-###########################################################
-
-AWS_ACCESS_KEY_ID = env_var('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = env_var('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = env_var('AWS_STORAGE_BUCKET_NAME')
-AWS_QUERYSTRING_AUTH = env_var('AWS_QUERYSTRING_AUTH', False)
-DEFAULT_FILE_STORAGE = env_var('DEFAULT_FILE_STORAGE', 'django.core.files.storage.FileSystemStorage')
-
-# URL prefix for static files.
-# Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = env_var('STATIC_URL', '/static/')
-
-ALLOWED_HOSTS = ['localhost', 'rvaconnect.herokuapp.com', 'rvaconnect.com', 'www.rvaconnect.com']
-
-###########################################################
-# Exception handling and reporting
-###########################################################
-
-RAVEN_CONFIG = {
-    'dsn': env_var('DSN', ''),
-}
-
-###########################################################
-# Security settings
-###########################################################
-
-# Permissive by default for development
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = env_var('SECURE_SSL_REDIRECT', False)
-
-SESSION_COOKIE_SECURE = env_var('SESSION_COOKIE_SECURE', False)
-SESSION_COOKIE_HTTPONLY = env_var('SESSION_COOKIE_HTTPONLY', False)
-
-#####################################################################
-#
-# Testing
-#
-#####################################################################
-TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
-SOUTH_TESTS_MIGRATE = False
+    ########## Your common stuff: Below this line define 3rd party libary settings
+    ADMIN_URL_PATH = values.Value('^admin/')
 
 
-###########################################################
-# Celery settings
-###########################################################
-BROKER_URL = env_var('CLOUDAMQP_URL', 'amqp://guest:guest@localhost:5672/')
-BROKER_POOL_LIMIT = env_var('BROKER_POOL_LIMIT', 1)
+class Local(Common):
+
+    ########## DEBUG
+    DEBUG = values.BooleanValue(True)
+    TEMPLATE_DEBUG = DEBUG
+    ########## END DEBUG
+
+    ########## INSTALLED_APPS
+    INSTALLED_APPS = Common.INSTALLED_APPS
+    ########## END INSTALLED_APPS
+
+    ########## Mail settings
+    EMAIL_HOST = "localhost"
+    EMAIL_PORT = 1025
+    EMAIL_BACKEND = values.Value('django.core.mail.backends.console.EmailBackend')
+    ########## End mail settings
+
+    ########## django-debug-toolbar
+    MIDDLEWARE_CLASSES = Common.MIDDLEWARE_CLASSES + ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+    INSTALLED_APPS += ('debug_toolbar',)
+
+    INTERNAL_IPS = ('127.0.0.1',)
+
+    DEBUG_TOOLBAR_CONFIG = {
+        'DISABLE_PANELS': [
+            'debug_toolbar.panels.redirects.RedirectsPanel',
+        ],
+        'SHOW_TEMPLATE_CONTEXT': True,
+    }
+    ########## end django-debug-toolbar
+
+    ########## Your local stuff: Below this line define 3rd party libary settings
 
 
-###########################################################
-# Email
-###########################################################
+class Production(Common):
 
-EMAIL_BACKEND = env_var('EMAIL_BACKEND',
-        'django.core.mail.backends.console.EmailBackend')
-CELERY_EMAIL_BACKEND = os.environ.get('CELERY_EMAIL_BACKEND',
-        'django.core.mail.backends.console.EmailBackend')
-EMAIL_HOST = env_var('EMAIL_HOST', '')
-EMAIL_PORT = env_var('EMAIL_PORT')
-EMAIL_HOST_USER = env_var('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env_var('EMAIL_HOST_PASSWORD')
-FROM_EMAIL = env_var('FROM_EMAIL', '')
+    ########## INSTALLED_APPS
+    INSTALLED_APPS = Common.INSTALLED_APPS
+    ########## END INSTALLED_APPS
 
+    ########## SECRET KEY
+    SECRET_KEY = values.SecretValue()
+    ########## END SECRET KEY
 
-###########################################################
-# Admin
-###########################################################
-ADMIN_URL_PATH = env_var('ADMIN_URL_PATH', '^admin/')
+    ########## django-secure
+    INSTALLED_APPS += ("djangosecure", )
+
+    # set this to 60 seconds and then to 518400 when you can prove it works
+    SECURE_HSTS_SECONDS = 60
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = values.BooleanValue(True)
+    SECURE_FRAME_DENY = values.BooleanValue(True)
+    SECURE_CONTENT_TYPE_NOSNIFF = values.BooleanValue(True)
+    SECURE_BROWSER_XSS_FILTER = values.BooleanValue(True)
+    SESSION_COOKIE_SECURE = values.BooleanValue(False)
+    SESSION_COOKIE_HTTPONLY = values.BooleanValue(True)
+    SECURE_SSL_REDIRECT = values.BooleanValue(True)
+    ########## end django-secure
+
+    ########## SITE CONFIGURATION
+    # Hosts/domain names that are valid for this site
+    # See https://docs.djangoproject.com/en/1.6/ref/settings/#allowed-hosts
+    ALLOWED_HOSTS = ["*"]
+    ########## END SITE CONFIGURATION
+
+    INSTALLED_APPS += ("gunicorn", )
+
+    INSTALLED_APPS += ("raven.contrib.django.raven_compat", )
+    RAVEN_CONFIG = {
+        'dsn': values.SecretValue(environ_prefix="", environ_name="SENTRY_DSN"),
+    }
+
+    ########## STORAGE CONFIGURATION
+    # See: http://django-storages.readthedocs.org/en/latest/index.html
+    INSTALLED_APPS += (
+        'storages',
+    )
+
+    STATIC_URL = '/static/'
+    ########## END STORAGE CONFIGURATION
+
+    ########## EMAIL
+    DEFAULT_FROM_EMAIL = values.Value(
+            'rvaconnect <noreply@rvaconnect.com>')
+    EMAIL_HOST = values.Value('smtp.mandrillapp.com')
+    EMAIL_HOST_PASSWORD = values.SecretValue(environ_name="EMAIL_HOST_PASSWORD")
+    EMAIL_HOST_USER = values.SecretValue(environ_name="EMAIL_HOST_USER")
+    EMAIL_PORT = values.IntegerValue(587, environ_name="EMAIL_PORT")
+    EMAIL_SUBJECT_PREFIX = values.Value('[rvaconnect] ', environ_name="EMAIL_SUBJECT_PREFIX")
+    EMAIL_USE_TLS = True
+    SERVER_EMAIL = EMAIL_HOST_USER
+    ########## END EMAIL
+
+    ########## TEMPLATE CONFIGURATION
+
+    # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
+    TEMPLATE_LOADERS = (
+        ('django.template.loaders.cached.Loader', (
+            'django.template.loaders.filesystem.Loader',
+            'django.template.loaders.app_directories.Loader',
+        )),
+    )
+    ########## END TEMPLATE CONFIGURATION
+
+    ########## CACHING
+    # Only do this here because thanks to django-pylibmc-sasl and pylibmc memcacheify is painful to install on windows.
+    try:
+        # See: https://github.com/rdegges/django-heroku-memcacheify
+        from memcacheify import memcacheify
+        CACHES = memcacheify()
+    except ImportError:
+        CACHES = values.CacheURLValue(default="memcached://127.0.0.1:11211")
+    ########## END CACHING
+
+    ########## Your production stuff: Below this line define 3rd party libary settings

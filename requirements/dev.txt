@@ -1,3 +1,0 @@
-# These requirements are useful for development/deploying, but unnecessary for
-# running the application itself.
-invoke==0.6.1                           # Tasks and stuff

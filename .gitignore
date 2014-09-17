@@ -1,64 +1,40 @@
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-*.mo
+# Basics
+*.py[cod]
 *.pyc
+__pycache__
 
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-
-# Logs and databases #
-######################
+# Logs
 *.log
-#*.sql
-*.sqlite
-*.db
+pip-log.txt
 
-# OS generated files #
-######################
-*.DS_Store
-ehthumbs.db
-Icon?
-Thumbs.db
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
 
-# Project specific files #
-##########################
-local_settings.py
-collectedstatic/
-collectedstaticfiles/
-media/
-nbproject/
-local_data/
-*.psd
-*.orig
+# Translations
+*.mo
+*.pot
+
+# Pycharm
 .idea
 
-# Vagrant and deployment related files #
-########################################
-vagrantconfig_local.yaml
-.vagrant
-.env
+# Vim
 
-# Documentation
-###############
-docs/_build
+*~
+*.swp
+*.swo
 
-# Development
-###############
+# npm
 node_modules/
-__pycache__
+
+# Campass
+.sass-cache
+
+# Vagrant
+Vagrantfile.local
+
+# Dev artifacts
+*.egg-info
+.env
+.ropeproject

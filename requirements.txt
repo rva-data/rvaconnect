@@ -1,35 +1,10 @@
-Django==1.6.7
+# This file is here because many Platforms as a Service look for
+# requirements.txt in the root directory of a project.
+# ----------------------------------------------------------------------------
+# pylibmc *must* be present in *this* file in order to use Memcached on
+# Heroku's platform because the buildpack looks in *this* file only for the
+# library before conditionally bootstrapping libmemcached
 
-dj-database-url==0.3.0
-psycopg2==2.5.4
-gunicorn==19.1.1
-South==1.0                        # DB migrations
-
-django-extensions==1.1.1            # better shell, add'l fields
-django-model-utils==1.3.1           # Better models
-django-form-utils==0.3              # Better forms
-
-django-secure==1.0                  # Security reminders, from Mozilla
-raven==5.0.0                        # Exception logging
-django_compressor==1.3              # Static file compression
-nose-progressive==1.3               # Better test results
-mock==1.0b1                         # Testing requirement
-#django-redis-sessions==0.3.1        # Redis based user sessions
-
-django-storages==1.1.8              # Alternate file storage support
-boto==2.9.6                         # AWS library
-
-#django-celery==3.0.17               # Celery for out-of-request tasks
-#django-celery-email==1.0.3          # Async email backend
-
-# US Local flavors
--e git://github.com/django/django-localflavor-us.git@dc1c554800ab975e068ac476cfbe7e21c108ca61#egg=django_localflavor_us-dev
-# use dev version of django-nose so we have tools (asserts)
-# django-nose==1.1                    # Better testing
--e git://github.com/jbalogh/django-nose.git@a420186893c0d6d80e92992231db14a14d1b0903#egg=django_nose-dev
-
-django-waffle==0.9.2                  # Feature flipping
-Markdown==2.3.1                     # Super awesome markup
-icalendar==3.5                        # iCal support
-django-ical==1.2                      # iCal feed support
-requests==1.2.3
+pylibmc==1.3.0
+django-heroku-memcacheify==0.5
+-r requirements/production.txt

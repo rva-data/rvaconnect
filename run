@@ -33,4 +33,4 @@ case "$1" in
     ;;
 esac
 
-./heroku "$1" run python afficon/manage.py "${@:2}"
+./heroku "$1" run python rvaconnect/manage.py "${@:2}"
