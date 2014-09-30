@@ -8,5 +8,5 @@
 # pylibmc==1.3.0
 # No support in package yet for Python 3 in pylibmc, so use dev
 -e git+https://github.com/lericson/pylibmc.git#egg=pylibmc
-django-heroku-memcacheify==0.5
+django-heroku-memcacheify==0.7
 -r requirements/production.txt
