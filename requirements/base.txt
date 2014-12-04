@@ -42,3 +42,6 @@ django-email-users==0.1.0
 dj-static==0.0.6
 connector-events==0.1.0
 connector-calendars==0.1.0
+
+# Python 3 support
+-e hg+https://bitbucket.org/bennylope/django-ical/@python3#egg=django-ical
