@@ -1,5 +1,8 @@
 # Pro-tip: Try not to put anything here. There should be no dependency in
 #	production that isn't in development.
+
+Mercurial  # Required for installing with pip and hg
+
 -r base.txt
 
 gunicorn==19.1.1
