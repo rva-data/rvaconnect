@@ -57,7 +57,7 @@ class Place(TimeStampedModel):
     objects = models.Manager()
     active = ActiveManager()
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     def save(self, *args, **kwargs):
@@ -85,5 +85,5 @@ class FeaturedPlace(TimeStampedModel):
     class Meta:
         ordering = ['-created']
 
-    def __unicode__(self):
-        return u"{0}: {1}".format(self.place.name, self.created.date())
+    def __str__(self):
+        return "{0}: {1}".format(self.place.name, self.created.date())

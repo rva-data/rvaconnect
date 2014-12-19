@@ -43,7 +43,7 @@ class Group(TimeStampedModel):
         verbose_name = 'group'
         verbose_name_plural = 'groups'
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name
 
     def save(self, *args, **kwargs):
